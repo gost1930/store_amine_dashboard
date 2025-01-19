@@ -1,1 +1,1 @@
-export {default as GeneralSideBar} from './GeneralSideBar/GeneralSideBar';
+export {default as GeneralPage} from './GeneralPage/GeneralPage';

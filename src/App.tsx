@@ -1,11 +1,19 @@
-import { BrowserRouter as Router, Routes } from "react-router-dom";
-import { GeneralSideBar } from "./containers";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { GeneralPage } from "./containers";
+// pages
+import { Store } from "./pages";
 const App = () => {
   return (
-    <section dir="rtl">
+    <section
+      dir="rtl"
+      className="overflow-x-hidden max-w-screen min-h-screen h-fit relative"
+    >
       <Router>
-        <GeneralSideBar />
-        <Routes></Routes>
+        <GeneralPage>
+          <Routes>
+            <Route path="/" element={<Store />} />
+          </Routes>
+        </GeneralPage>
       </Router>
     </section>
   );
