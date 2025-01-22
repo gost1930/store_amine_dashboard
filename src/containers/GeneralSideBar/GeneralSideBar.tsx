@@ -77,38 +77,72 @@ const GeneralSideBar = ({ isOpen, setIsOpen }: any) => {
         <div className="mt-5 px-1">
           {links.map((link, index) => (
             <div key={index} className="mb-2 duration-300 h-fit">
-              <Link
-                to={link.path}
-                className={`flex flex-col ${
-                  !isOpen && "items-end -translate-x-2 lg:translate-x-1"
-                }`}
-                onClick={() => logicforSlide(link)}
-              >
-                <motion.div
-                  className={` py-2 px-3 my-1 rounded-xl hover:bg-cyan-600 ${
-                    openSubLinks === link.name
-                      ? "bg-cyan-600 text-white"
-                      : "hover:text-white"
-                  }  
-                  flex justify-between items-center`}
-                  onClick={() =>
-                    link.subLinks?.length && toggleSubLinks(link.name)
-                  }
+              {link.subLinks?.length ? (
+                <Link
+                  to={link.path}
+                  className={`flex flex-col ${
+                    !isOpen && "items-end -translate-x-2 lg:translate-x-1"
+                  }`}
+                  onClick={() => logicforSlide(link)}
                 >
-                  {/* title */}
-                  <h1 className="flex items-center gap-x-2 text-lg">
-                    <span className="text-2xl">{link.icon}</span>
-                    {isOpen ? <span>{link.name}</span> : null}
-                  </h1>
-                  {isOpen && link.subLinks?.length ? (
-                    <IoIosArrowDown
-                      className={`${
-                        openSubLinks === link.name ? "rotate-180" : ""
-                      } duration-200`}
-                    />
-                  ) : null}
-                </motion.div>
-              </Link>
+                  <motion.div
+                    className={` py-2 px-3 my-1 rounded-xl hover:bg-cyan-600 ${
+                      openSubLinks === link.name
+                        ? "bg-cyan-600 text-white"
+                        : "hover:text-white"
+                    }  
+                  flex justify-between items-center`}
+                    onClick={() =>
+                      link.subLinks?.length && toggleSubLinks(link.name)
+                    }
+                  >
+                    {/* title */}
+                    <h1 className="flex items-center gap-x-2 text-lg">
+                      <span className="text-2xl">{link.icon}</span>
+                      {isOpen ? <span>{link.name}</span> : null}
+                    </h1>
+                    {isOpen && link.subLinks?.length ? (
+                      <IoIosArrowDown
+                        className={`${
+                          openSubLinks === link.name ? "rotate-180" : ""
+                        } duration-200`}
+                      />
+                    ) : null}
+                  </motion.div>
+                </Link>
+              ) : (
+                <div
+                  className={`flex flex-col ${
+                    !isOpen && "items-end -translate-x-2 lg:translate-x-1"
+                  }`}
+                  onClick={() => logicforSlide(link)}
+                >
+                  <motion.div
+                    className={` py-2 px-3 my-1 rounded-xl hover:bg-cyan-600 ${
+                      openSubLinks === link.name
+                        ? "bg-cyan-600 text-white"
+                        : "hover:text-white"
+                    }  
+                  flex justify-between items-center`}
+                    onClick={() =>
+                      link.subLinks?.length && toggleSubLinks(link.name)
+                    }
+                  >
+                    {/* title */}
+                    <h1 className="flex items-center gap-x-2 text-lg">
+                      <span className="text-2xl">{link.icon}</span>
+                      {isOpen ? <span>{link.name}</span> : null}
+                    </h1>
+                    {isOpen && link.subLinks?.length ? (
+                      <IoIosArrowDown
+                        className={`${
+                          openSubLinks === link.name ? "rotate-180" : ""
+                        } duration-200`}
+                      />
+                    ) : null}
+                  </motion.div>
+                </div>
+              )}
               {openSubLinks === link.name &&
                 link.subLinks?.length &&
                 isOpen && (
