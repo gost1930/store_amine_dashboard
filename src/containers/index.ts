@@ -5,3 +5,4 @@ export {default as LogoCustomize} from './Sore/LogoCustomize';
 export {default as Theme} from "./Theme/Theme";
 export {default as Colors} from "./Theme/Colors";
 export {default as ProductCutomize} from "./Theme/ProductCustomize/ProductCutomize";
+export {default as CategoryCusomize} from "./Theme/CategoryCusomize/CategoryCusomize";

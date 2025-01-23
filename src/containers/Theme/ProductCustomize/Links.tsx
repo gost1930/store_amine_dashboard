@@ -1,4 +1,4 @@
-import { links } from "./linksVar";
+import { links } from "./staticData";
 // react-rounter-dom
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
