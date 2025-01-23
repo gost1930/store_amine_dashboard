@@ -43,7 +43,7 @@ const LogoCustomize = () => {
           </label>
         </div>
         {/* btn submit */}
-        <Button text="حفظ" className="w-full mt-5" type="submit" />
+        <Button text="حفظ" className="w-full mt-5 bg-primary" type="submit" />
       </form>
     </section>
   );

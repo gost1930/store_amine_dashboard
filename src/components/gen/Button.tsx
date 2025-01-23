@@ -7,7 +7,7 @@ interface Props {
 }
 const Button: React.FC<Props>  = ({className , text , type , onClick}) => {
   return (
-    <button type={type || "submit"} onClick={onClick} className={`px-4 py-2 text-white bg-primary rounded-xl ${className}`}>{text}</button>
+    <button type={type || "submit"} onClick={onClick} className={`px-4 py-2 text-white  rounded-xl ${className}`}>{text}</button>
   )
 }
 

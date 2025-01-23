@@ -22,7 +22,7 @@ const Colors = () => {
           {/* hash of color */}
           <p>{color}</p>
         </div>
-        <Button text="حفظ" className="mt-10 w-32"/>
+        <Button text="حفظ" className="mt-10 w-32 bg-primary"/>
       </form>
     </div>
   );

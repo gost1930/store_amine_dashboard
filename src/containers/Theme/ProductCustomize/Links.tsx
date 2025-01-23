@@ -1,4 +1,4 @@
-import { links } from "./links";
+import {links} from "./linksVar";
 // react-rounter-dom
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -7,7 +7,6 @@ const Links = () => {
     const {pathname} = useLocation();
     const thePath = pathname.split("/").pop();
 
-    // console.log(mainPath) 
   return (
     <div className="flex gap-x-4 items-center">
       {/* links */}
