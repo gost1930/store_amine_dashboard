@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { PageTile } from "../../../components";
-import DInamiqueCard from "./DInamiqueCard";
+import DInamiqueCard from "./DInamiqueCard/DInamiqueCard";
+import StaticCard from "./CardStatic/StaticCard";
 
 const ProductCustomize = () => {
   const [choose, setChoose] = useState<string>("dinamiqe");
@@ -38,7 +39,7 @@ const ProductCustomize = () => {
 
       {/* البطاقة */}
       {
-        choose === "dinamiqe" && <DInamiqueCard />
+        choose === "dinamiqe" ? <DInamiqueCard /> : <StaticCard />
       }
     </div>
   );
