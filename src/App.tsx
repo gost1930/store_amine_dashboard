@@ -1,5 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Colors, GeneralPage, LogoCustomize , Theme , ProductCutomize , CategoryCusomize} from "./containers";
+import {
+  Colors,
+  GeneralPage,
+  LogoCustomize,
+  Theme,
+  ProductCutomize,
+  CategoryCusomize,
+  NavBarCustomize,
+} from "./containers";
 // pages
 import { Store } from "./pages";
 const App = () => {
@@ -18,7 +26,7 @@ const App = () => {
                 <Route path="" element={<Colors />} />
                 <Route path="product" element={<ProductCutomize />} />
                 <Route path="category" element={<CategoryCusomize />} />
-                <Route path="nabbar" element={<h1>cards</h1>} />
+                <Route path="navbar" element={<NavBarCustomize />} />
                 <Route path="list" element={<h1>cards</h1>} />
                 <Route path="notification" element={<h1>cards</h1>} />
                 <Route path="thankyou" element={<h1>cards</h1>} />

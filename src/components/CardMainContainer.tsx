@@ -1,14 +1,20 @@
 import { useState } from "react";
-import { PageTile } from "../../components";
+import { PageTile } from "./index";
 
 interface ICardMainContainer {
-    pageTitle: string;
-    subPageTitle: string;
-    btn: { name: string; value: string }[];
-    dinamiqeCard?: JSX.Element;
-    staticCard: JSX.Element;
-    }
-const CardMainContainer: React.FC<ICardMainContainer> = ({pageTitle , subPageTitle , btn , dinamiqeCard , staticCard}) => {
+  pageTitle: string;
+  subPageTitle: string;
+  btn: { name: string; value: string }[];
+  dinamiqeCard?: JSX.Element;
+  staticCard: JSX.Element;
+}
+const CardMainContainer: React.FC<ICardMainContainer> = ({
+  pageTitle,
+  subPageTitle,
+  btn,
+  dinamiqeCard,
+  staticCard,
+}) => {
   const [choose, setChoose] = useState<string>("static");
   const handleChange = (b: string) => setChoose(b);
 
@@ -17,9 +23,7 @@ const CardMainContainer: React.FC<ICardMainContainer> = ({pageTitle , subPageTit
       <PageTile title={pageTitle} />
 
       {/* قسم التحكم */}
-      <section className="w-full p-4 mb-5 rounded-lg">
-        <h2 className="text-lg font-bold mb-4">{subPageTitle}</h2>
-      </section>
+      <h2 className="text-lg font-bold mb-4">{subPageTitle}</h2>
       {/* btn */}
       <div className="flex gap-x-4">
         {btn.map((b, index) => (
