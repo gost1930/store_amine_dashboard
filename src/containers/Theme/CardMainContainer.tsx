@@ -5,11 +5,11 @@ interface ICardMainContainer {
     pageTitle: string;
     subPageTitle: string;
     btn: { name: string; value: string }[];
-    dinamiqeCard: JSX.Element;
+    dinamiqeCard?: JSX.Element;
     staticCard: JSX.Element;
     }
 const CardMainContainer: React.FC<ICardMainContainer> = ({pageTitle , subPageTitle , btn , dinamiqeCard , staticCard}) => {
-  const [choose, setChoose] = useState<string>("dinamiqe");
+  const [choose, setChoose] = useState<string>("static");
   const handleChange = (b: string) => setChoose(b);
 
   return (

@@ -1,13 +1,13 @@
 import Card from "./Card";
 import { Button } from "../../../../components";
-import { productCardClasses } from "../../../../utils/Variables/classes";
+import { categotyCardClasses } from "../../../../utils/Variables/classes";
 
 const StaticCard = () => {
   return (
     <section>
       <Button text="حفظ" className="mt-10 w-32 h-fit bg-primary" />
       <div className="w-full h-fit p-3 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
-        {productCardClasses.map((card, index) => (
+        {categotyCardClasses.map((card, index) => (
           <div>
             <div>
               <input type="radio" name="card" id={card.name} className="ml-2" />

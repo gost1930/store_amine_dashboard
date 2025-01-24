@@ -1,7 +1,7 @@
 // components
 import { Outlet } from "react-router-dom";
 import {PageTile , PageDesc} from "../../components";
-import Links from "./ProductCustomize/Links.tsx";
+import Links from "./Links.tsx";
 
 const Theme = () => {
   return (
