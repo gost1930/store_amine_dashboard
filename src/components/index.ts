@@ -5,3 +5,5 @@ export {default as PageDesc} from "./gen/PageDesc";
 
 // card main
 export {default as CardMainContainer} from "./CardMainContainer";
+// search bar
+export {default as SearchBar} from "./gen/SearchBar";

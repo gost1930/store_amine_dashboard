@@ -7,6 +7,7 @@ import {
   ProductCutomize,
   CategoryCusomize,
   NavBarCustomize,
+  SlideBarCustomize
 } from "./containers";
 // pages
 import { Store } from "./pages";
@@ -27,7 +28,7 @@ const App = () => {
                 <Route path="product" element={<ProductCutomize />} />
                 <Route path="category" element={<CategoryCusomize />} />
                 <Route path="navbar" element={<NavBarCustomize />} />
-                <Route path="list" element={<h1>cards</h1>} />
+                <Route path="list" element={<SlideBarCustomize />} />
                 <Route path="notification" element={<h1>cards</h1>} />
                 <Route path="thankyou" element={<h1>cards</h1>} />
               </Route>

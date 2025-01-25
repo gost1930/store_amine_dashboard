@@ -7,3 +7,4 @@ export {default as Colors} from "./Theme/Colors";
 export {default as ProductCutomize} from "./Theme/ProductCustomize/ProductCutomize";
 export {default as CategoryCusomize} from "./Theme/CategoryCusomize/CategoryCusomize";
 export {default as NavBarCustomize} from "./Theme/NavBarCustomize/NavBarCustomize";
+export {default as SlideBarCustomize} from "./Theme/SlideBarCustomize/SlideBarCustomize";

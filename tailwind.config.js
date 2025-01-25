@@ -7,19 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        primary: "#fe2c57", // Red from the bot's speech bubbles
-        secondery: "#e47100", // Orange from the bot's speech bubbles
+        primary: "#fe2c57",
+        secondery: "#27272a",
         /* Extra Coolrs */
-        white: "#FFFFFF", // Background color
-        black: "#000000", // Text color
-        // green: "#00FF00", // Dot indicating online status
-        // gray: "#f3f4f6",
-      },
-      fontFamily: {
-        jaldi: ["Jaldi", "sans-serif"],
-      },
+        white: "#FFFFFF",
+        black: "#000000",
+      }
     },
   },
   plugins: [],

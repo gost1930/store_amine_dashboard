@@ -2,8 +2,17 @@ import { useState } from "react";
 import { PageTile } from "../../../components";
 import NavBar from "./NavBar";
 
+type Styles = {
+  btn: boolean;
+  logo: boolean;
+  name: boolean;
+  searshBar: boolean;
+  cardPrice: boolean;
+  price: boolean;
+};
+
 const NavBarCustomize = () => {
-  const [styles, setStyles] = useState({
+  const [styles, setStyles] = useState<Styles>({
     btn: true,
     logo: true,
     name: true,
@@ -13,15 +22,15 @@ const NavBarCustomize = () => {
   });
 
   const handleChange = (e: any) => {
-    const { name, checked } = e.target; // استخدام checked بدل value
+    const { name, checked } = e.target;
     setStyles((prev) => ({
       ...prev,
-      [name]: checked, // تحديث القيم بناءً على الحالة الجديدة
+      [name]: checked,
     }));
     console.log(styles);
   };
 
-  const changes = [
+  const changes: { label: string; name: keyof Styles }[] = [
     { label: "الزر", name: "btn" },
     { label: "الشعار", name: "logo" },
     { label: "الاسم", name: "name" },

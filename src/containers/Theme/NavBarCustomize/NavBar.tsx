@@ -2,7 +2,8 @@ import React from "react";
 // icons
 import { FaBarsStaggered } from "react-icons/fa6";
 import { CiShoppingCart } from "react-icons/ci";
-import { CiSearch } from "react-icons/ci";
+// component
+import { SearchBar } from "../../../components";
 
 interface INavBar {
   btn: boolean;
@@ -42,21 +43,14 @@ const NavBar: React.FC<INavBar> = ({
         )}
         {/* name */}
         {
-            name && (
-                <h1 className="text-xl font-bold text-zinc-800">أمين</h1>
-            )
+          name && (
+            <h1 className="text-xl font-bold text-zinc-800">أمين</h1>
+          )
         }
         {/* searshBar */}
         {searshBar && (
           <div className="w-1/2 flex items-center gap-x-2 relative">
-            <input
-              type="text"
-              placeholder="ابحث هنا"
-              className="w-full h-12 px-2 bg-zinc-100 rounded-lg"
-            />
-            <button type="submit" className=" absolute top-2 left-1 text-2xl">
-              <CiSearch className="" />
-            </button>
+            <SearchBar />
           </div>
         )}
       </div>
