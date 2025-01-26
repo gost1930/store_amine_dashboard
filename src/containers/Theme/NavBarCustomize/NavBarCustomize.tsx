@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PageTile , CheckBox } from "../../../components";
+import { PageTile, CheckBox, Button } from "../../../components";
 import NavBar from "./NavBar";
 
 type Styles = {
@@ -28,6 +28,17 @@ const NavBarCustomize = () => {
       [name]: checked,
     }));
   };
+
+  const setDefaultStyles = ()=> {
+    setStyles({
+      btn: true,
+      logo: true,
+      name: true,
+      searshBar: true,
+      cardPrice: true,
+      price: true,
+    })
+  }
 
   const changes: { label: string; name: keyof Styles }[] = [
     { label: "الزر", name: "btn" },
@@ -65,6 +76,7 @@ const NavBarCustomize = () => {
           ))}
         </form>
       </div>
+        <Button text="إعادة تعيين" className="mt-10 w-32 h-fit bg-black" onClick={setDefaultStyles} />
     </section>
   );
 };
