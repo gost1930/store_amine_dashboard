@@ -8,3 +8,4 @@ export {default as ProductCutomize} from "./Theme/ProductCustomize/ProductCutomi
 export {default as CategoryCusomize} from "./Theme/CategoryCusomize/CategoryCusomize";
 export {default as NavBarCustomize} from "./Theme/NavBarCustomize/NavBarCustomize";
 export {default as SlideBarCustomize} from "./Theme/SlideBarCustomize/SlideBarCustomize";
+export {default as ThanksPageCustomize} from "./Theme/ThanksPageCustomize/ThanksPageCustomize";

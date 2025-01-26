@@ -9,6 +9,6 @@ export const links: Link[] = [
     {name:"التصنيف" , path:"category"},
     {name:"شريط التنقل" , path:"navbar"},
     {name:"القائمة" , path:"list"},
-    {name:"شريط الإشعارات" , path:"notification"},
+    // {name:"شريط الإشعارات" , path:"notification"},
     {name:"صفحة الشكر" , path:"thankyou"},
 ];

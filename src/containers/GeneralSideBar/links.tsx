@@ -1,4 +1,17 @@
 import { IoHomeOutline } from "react-icons/io5";
+import { IoStorefrontOutline } from "react-icons/io5";
+import { BsBoxSeam } from "react-icons/bs";
+import { AiOutlineProduct } from "react-icons/ai";
+import { TbCategoryPlus } from "react-icons/tb";
+import { BsTruck } from "react-icons/bs";
+import { IoIosStarOutline } from "react-icons/io";
+import { FaEarthAmericas } from "react-icons/fa6";
+import { LuChartSpline } from "react-icons/lu";
+import { LuUsersRound } from "react-icons/lu";
+import { IoExtensionPuzzleOutline } from "react-icons/io5";
+import { LiaUserSecretSolid } from "react-icons/lia";
+import { IoSettingsOutline } from "react-icons/io5";
+import { MdOutlinePayments } from "react-icons/md";
 
 interface Link {
   name: string;
@@ -12,7 +25,7 @@ export const links: Link[] = [
   {
     name: "صمم متجرك",
     path: "/store",
-    icon: <IoHomeOutline />,
+    icon: <IoStorefrontOutline />,
     subLinks: [
       { name: "الشعار", path: "/store/logo" },
       { name: "القالب", path: "/store/theme" },
@@ -25,7 +38,7 @@ export const links: Link[] = [
   {
     name: "الطلبات",
     path: "/orders",
-    icon: <IoHomeOutline />,
+    icon: <BsBoxSeam />,
     subLinks: [
       { name: "كل الطلبات", path: "" },
       { name: "الطلبات الجديدة", path: "" },
@@ -35,7 +48,7 @@ export const links: Link[] = [
   {
     name: "المنتجات",
     path: "/orders",
-    icon: <IoHomeOutline />,
+    icon: <AiOutlineProduct />,
     subLinks: [
       { name: "الكل", path: "" },
       { name: "إضافة منتج", path: "" },
@@ -45,7 +58,7 @@ export const links: Link[] = [
   {
     name: "التصنيفات",
     path: "/orders",
-    icon: <IoHomeOutline />,
+    icon: <TbCategoryPlus />,
     subLinks: [
       { name: "الكل", path: "" },
       { name: "إضافة تصنيف", path: "" },
@@ -54,7 +67,7 @@ export const links: Link[] = [
   {
     name: "التوصيل",
     path: "/orders",
-    icon: <IoHomeOutline />,
+    icon: <BsTruck />,
     subLinks: [
       { name: "ولايات التوصيل", path: "" },
       { name: "إضافة ولاية", path: "" },
@@ -64,14 +77,14 @@ export const links: Link[] = [
   {
     name: "آراء الزبائن",
     path: "/orders",
-    icon: <IoHomeOutline />,
+    icon: <IoIosStarOutline />,
     subLinks: [],
   },
-  { name: "الدومين", path: "/orders", icon: <IoHomeOutline />, subLinks: [] },
+  { name: "الدومين", path: "/orders", icon: <FaEarthAmericas />, subLinks: [] },
   {
     name: "الإحصائيات",
     path: "/orders",
-    icon: <IoHomeOutline />,
+    icon: <LuChartSpline />,
     subLinks: [
       { name: "عام", path: "" },
       { name: "المنتجات", path: "" },
@@ -81,7 +94,7 @@ export const links: Link[] = [
   {
     name: "عمال المتجر",
     path: "/orders",
-    icon: <IoHomeOutline />,
+    icon: <LuUsersRound />,
     subLinks: [
       { name: "الكل", path: "" },
       { name: "إضافة عامل", path: "" },
@@ -90,7 +103,7 @@ export const links: Link[] = [
   {
     name: "الإضافات",
     path: "/orders",
-    icon: <IoHomeOutline />,
+    icon: <IoExtensionPuzzleOutline />,
     subLinks: [
       { name: "الكل", path: "" },
       { name: "إضافة عامل", path: "" },
@@ -99,7 +112,7 @@ export const links: Link[] = [
   {
     name: "الزبائن المشبوهين",
     path: "/orders",
-    icon: <IoHomeOutline />,
+    icon: <LiaUserSecretSolid />,
     subLinks: [
       { name: "الكل", path: "" },
       { name: "إضافة عامل", path: "" },
@@ -108,6 +121,6 @@ export const links: Link[] = [
 ];
 
 export const settingsAndPayment: Link[] = [
-  { name: "الاعدادات", path: "/", icon: <IoHomeOutline />, subLinks: [] },
-  { name: "الدفع", path: "/", icon: <IoHomeOutline />, subLinks: [] },
+  { name: "الاعدادات", path: "/", icon: <IoSettingsOutline />, subLinks: [] },
+  { name: "الدفع", path: "/", icon: <MdOutlinePayments />, subLinks: [] },
 ];

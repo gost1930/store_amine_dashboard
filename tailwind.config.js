@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#fe2c57",
+        primary: "#3B82F6",
         secondery: "#27272a",
         /* Extra Coolrs */
         white: "#FFFFFF",

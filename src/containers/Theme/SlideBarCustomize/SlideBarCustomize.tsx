@@ -1,7 +1,7 @@
 // import React from 'react'
 // component
 import { useState } from "react"
-import { CheckBox, PageTile } from "../../../components"
+import { Button, CheckBox, PageTile, ColorInput } from "../../../components"
 import SlidBar from "./SlidBar"
 import { changes } from "../../../utils/Variables/slideVar"
 
@@ -20,7 +20,13 @@ type Styles = {
   sclMediaSection: boolean;
 
 }
-
+type Colors = {
+  parentBgColor: string;
+  nameColor: string;
+  categoryTextColor: string;
+  categoryBgColor: string;
+  dividerColor: string;
+}
 const SlideBarCustomize = () => {
 
 
@@ -38,22 +44,14 @@ const SlideBarCustomize = () => {
     sclMediaSection: true,
 
   })
-  type Colors = {
-    parentBgColor: string;
-    nameColor: string;
-    categoryTextColor: string;
-    categoryBgColor: string;
-    dividerColor: string;
-  }
 
   const [colors, setColors] = useState<Colors>({
     parentBgColor: "#fff",
     nameColor: "#000",
     categoryTextColor: "#000",
-    categoryBgColor: "#fff",
+    categoryBgColor: "#f5f5f5",
     dividerColor: "#ccc"
   })
-
 
   const handleChange = (e: any) => {
     const { name, checked } = e.target;
@@ -63,20 +61,31 @@ const SlideBarCustomize = () => {
     }));
   };
 
-  const changesIfColors =[
-    {name:"" , title:"parentBgColor" , value:colors.parentBgColor},
-    {name:"" , title:"nameColor" , value:colors.nameColor},
-    {name:"" , title:"categoryTextColor" , value:colors.categoryTextColor},
-    {name:"" , title:"categoryBgColor" , value:colors.categoryBgColor},
-    {name:"" , title:"dividerColor" , value:colors.dividerColor},
+  const changesIfColors: { name: string, title: keyof Colors, value: string }[] = [
+    { name: "لون الخلفية الرئيسية", title: "parentBgColor", value: colors.parentBgColor },
+    { name: "لون إسم الموقع", title: "nameColor", value: colors.nameColor },
+    { name: "لون الروابط", title: "categoryTextColor", value: colors.categoryTextColor },
+    { name: "لون خلفية التصنيفات", title: "categoryBgColor", value: colors.categoryBgColor },
+    { name: "لون الشريط السفلي", title: "dividerColor", value: colors.dividerColor },
   ]
 
   const handleColor = (e: any) => {
-    const { title, value } = e.target;
+    const { name, value } = e.target;
     setColors(prev => ({
       ...prev,
-      [title]: value
+      [name]: value
     }))
+  }
+
+  const setDefaultColors = () => {
+    setColors({
+      parentBgColor: "#fff",
+      nameColor: "#000",
+      categoryTextColor: "#000",
+      categoryBgColor: "#f5f5f5",
+      dividerColor: "#ccc"
+
+    })
   }
 
   return (
@@ -86,9 +95,9 @@ const SlideBarCustomize = () => {
       <div className="flex  gap-4">
         <SlidBar
           {...styles}
-          {...colors}
+          colors={colors}
         />
-        <div className="w-[70%]">
+        <div className="w-[70%] flex flex-col">
           {
             changes.map((c, i) => (
               <div className="flex items-center gap-3 my-1">
@@ -105,13 +114,20 @@ const SlideBarCustomize = () => {
           <div className="h-[1px] ml-2 w-full bg-zinc-300 rounded-full"></div>
           <div className="w-full">
             {
-              changesIfColors.map((c , i)=>(
-                <div key={i}>
-                  <input type="color" name={c.name} id={c.name} value={colors[c.value]} onChange={handleColor} />
+              changesIfColors.map((c, i) => (
+                // <div key={i}>
+                //   <input type="color" name={c.title} id={c.title} value={c.value} onChange={handleColor} />
+                // </div>
+                <div className="flex items-center gap-3 my-1" key={i}>
+                  <ColorInput color={colors[c.title]} onChange={handleColor} name={c.title} id={c.title} />
                   <label htmlFor={c.name}>{c.name}</label>
                 </div>
               ))
             }
+          </div>
+          <div className="flex gap-x-4 self-end">
+            <Button text="استعادة الوضع الافتراضي" type="button" onClick={setDefaultColors} className="my-2 border bg-black hover:bg-gray-800" />
+            <Button text="حفظ" type="button" className="my-2 border bg-primary hover:bg-rose-500" />
           </div>
         </div>
       </div>

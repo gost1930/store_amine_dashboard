@@ -19,11 +19,8 @@ interface Props {
     contactPage: boolean;
     categoriesSection: boolean;
     sclMediaSection: boolean;
-    parentBgColor: string;
-    nameColor: string;
-    categoryTextColor: string;
-    categoryBgColor: string;
-    dividerColor: string;
+    // colors
+    colors: any;
 }
 
 const SlidBar: React.FC<Props> = ({
@@ -39,12 +36,8 @@ const SlidBar: React.FC<Props> = ({
     contactPage = true,
     categoriesSection = true,
     sclMediaSection = true,
-    // styles props
-    parentBgColor,
-    nameColor,
-    categoryTextColor,
-    categoryBgColor,
-    dividerColor
+    // colors state
+    colors
 
 }) => {
     const pageVisibility = {
@@ -62,10 +55,12 @@ const SlidBar: React.FC<Props> = ({
         title: string;
     }
 
-    const show = (link: Link, index: number) => {
+    const showLink = (link: Link, index: number) => {
         if (pageVisibility[link.name]) {
             return (
-                <motion.div initial={{ x: 0 }} whileHover={{ x: -2 }} key={index} className="py-3 px-1 w-full rounded-lg hover:bg-gray-100 ">
+                <motion.div initial={{ x: 0 }} whileHover={{ x: -2 }} key={index} className="py-3 px-1 w-full rounded-lg hover:bg-gray-100 cursor-pointer"
+                    style={{ backgroundColor: colors.linkBgColor }}
+                >
                     <h1 className={`${index === 0 ? "text-black" : "text-gray-500"} font-semibold`}>{link.title}</h1>
                 </motion.div>
             );
@@ -73,12 +68,9 @@ const SlidBar: React.FC<Props> = ({
         return null;
     };
 
-    // // default gray color
-    // const grayColor = "#eaeaea";
-
     return (
         <section className="w-96 h-fit min-h-screen border p-2"
-            style={{ backgroundColor: parentBgColor }}
+            style={{ backgroundColor: colors.parentBgColor }}
         >
             <div className="flex flex-col items-center justify-start gap-y-4 my-10">
                 {/* logo */}
@@ -92,28 +84,28 @@ const SlidBar: React.FC<Props> = ({
                     </div>
                 )}
                 {/* website name */}
-                {name && <h1 className="text-2xl " style={{ color: nameColor || "black" }}>أمين ستور</h1>}
+                {name && <h1 className="text-2xl " style={{ color: colors.nameColor || "black" }}>أمين ستور</h1>}
                 {/* search bar */}
                 {searchBar && <div className="w-full h-16 relative"><SearchBar /></div>}
                 {/* links */}
-                {sidBarLink.map((t, index) => show(t as any, index))}
+                {sidBarLink.map((t, index) => showLink(t as any, index))}
             </div>
             {/* divider */}
-            {categoriesSection && <div className="h-[1px] ml-2 w-full bg-zinc-300 rounded-full" style={{ backgroundColor: dividerColor }}></div>}
+            {categoriesSection && <div className="h-[1px] ml-2 w-full bg-zinc-300 rounded-full" style={{ backgroundColor: colors.dividerColor }}></div>}
             <div className="grid grid-cols-3 gap-4 my-2">
                 {/* categories */}
                 {categoriesSection && (
                     Array.from({ length: 6 }).map((_, index) => (
                         <div key={index} className="grid place-content-center py-2 rounded bg-gray-100 hover:bg-gray-200 cursor-pointer"
-                            style={{ backgroundColor: categoryBgColor }}
+                            style={{ backgroundColor: colors.categoryBgColor }}
                         >
-                            <h1 style={{ color: categoryTextColor || "gray" }}>التصنيف 1</h1>
+                            <h1 style={{ color: colors.categoryTextColor }}>التصنيف 1</h1>
                         </div>
                     ))
                 )}
             </div>
             {/* divider */}
-            {sclMediaSection && <div className="h-[1px] ml-2 w-full bg-zinc-300 rounded-full" style={{ backgroundColor: dividerColor }}></div>}
+            {sclMediaSection && <div className="h-[1px] ml-2 w-full bg-zinc-300 rounded-full" style={{ backgroundColor: colors.dividerColor }}></div>}
             {/* scl media */}
             <div className="flex items-center justify-center gap-x-3 p-2">
                 {

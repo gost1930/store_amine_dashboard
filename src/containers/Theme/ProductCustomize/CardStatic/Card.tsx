@@ -20,7 +20,7 @@ const Card: React.FC<ICard> = ({
     <motion.div
     initial={{ scale: 0.5 , opacity:0 }}
     animate={{ scale: 1 , opacity:1}}
-      className={`border cursor-pointer relative duration-300 rounded-xl w-full h-fit flex flex-col ${parentClassName}`}
+      className={`border cursor-pointer relative rounded-xl w-full h-fit flex flex-col ${parentClassName}`}
     >
       {/* img */}
       <div className={`w-full h-[70%] ${parentImageClasseName}`}>
