@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PageTile } from "../../../components";
+import { PageTile , CheckBox } from "../../../components";
 import NavBar from "./NavBar";
 
 type Styles = {
@@ -27,7 +27,6 @@ const NavBarCustomize = () => {
       ...prev,
       [name]: checked,
     }));
-    console.log(styles);
   };
 
   const changes: { label: string; name: keyof Styles }[] = [
@@ -56,14 +55,7 @@ const NavBarCustomize = () => {
           {changes.map((c, i) => (
             <div className="flex items-center gap-3">
               <div dir="ltr" key={i} className="checkbox-wrapper-7">
-                <input
-                  type="checkbox"
-                  name={c.name}
-                  id={c.name}
-                  checked={styles[c.name]}
-                  onChange={handleChange}
-                  className="tgl tgl-ios"
-                />
+                <CheckBox name={c.name} id={c.name} checked={styles[c.name]} onChange={handleChange} />
                 <label htmlFor={c.name} className="tgl-btn"></label>
               </div>
               <label htmlFor={c.name} className="tgl-btn">
@@ -78,15 +70,3 @@ const NavBarCustomize = () => {
 };
 
 export default NavBarCustomize;
-
-/*
-    <div class="checkbox-wrapper-7">
-  <input class="" type="checkbox"/>
-  <label class="tgl-btn" for="cb2-7">
-</div>
-
-<style>
-  
-</style>
-
-*/

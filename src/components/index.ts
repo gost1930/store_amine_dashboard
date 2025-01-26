@@ -7,3 +7,5 @@ export {default as PageDesc} from "./gen/PageDesc";
 export {default as CardMainContainer} from "./CardMainContainer";
 // search bar
 export {default as SearchBar} from "./gen/SearchBar";
+// checkBox
+export {default as CheckBox} from "./gen/CheckBox"

@@ -19,9 +19,15 @@ interface Props {
     contactPage: boolean;
     categoriesSection: boolean;
     sclMediaSection: boolean;
+    parentBgColor: string;
+    nameColor: string;
+    categoryTextColor: string;
+    categoryBgColor: string;
+    dividerColor: string;
 }
 
 const SlidBar: React.FC<Props> = ({
+    // show any sec or link
     logo = true,
     name = true,
     searchBar = true,
@@ -32,7 +38,14 @@ const SlidBar: React.FC<Props> = ({
     deliveryPricePage = true,
     contactPage = true,
     categoriesSection = true,
-    sclMediaSection = true
+    sclMediaSection = true,
+    // styles props
+    parentBgColor,
+    nameColor,
+    categoryTextColor,
+    categoryBgColor,
+    dividerColor
+
 }) => {
     const pageVisibility = {
         mainPage,
@@ -45,23 +58,28 @@ const SlidBar: React.FC<Props> = ({
 
     // Simplified show function to check if page should be displayed
     interface Link {
-        name: keyof typeof pageVisibility;
+        name: 'mainPage' | 'categoriesPage' | 'cartPage' | 'orderStatusPage' | 'deliveryPricePage' | 'contactPage';
         title: string;
     }
 
     const show = (link: Link, index: number) => {
         if (pageVisibility[link.name]) {
             return (
-                <motion.div initial={{ x: 0 }} whileHover={{ x: -2 }} key={index} className="py-3 px-1 w-full rounded-lg hover:bg-gray-100">
-                    <h1 className={`${index === 0 ? "text-black" : "text-gray-500"} font-semibold cursor-pointer`}>{link.title}</h1>
+                <motion.div initial={{ x: 0 }} whileHover={{ x: -2 }} key={index} className="py-3 px-1 w-full rounded-lg hover:bg-gray-100 ">
+                    <h1 className={`${index === 0 ? "text-black" : "text-gray-500"} font-semibold`}>{link.title}</h1>
                 </motion.div>
             );
         }
         return null;
     };
 
+    // // default gray color
+    // const grayColor = "#eaeaea";
+
     return (
-        <section className="w-96 h-fit min-h-screen border p-2">
+        <section className="w-96 h-fit min-h-screen border p-2"
+            style={{ backgroundColor: parentBgColor }}
+        >
             <div className="flex flex-col items-center justify-start gap-y-4 my-10">
                 {/* logo */}
                 {logo && (
@@ -74,34 +92,36 @@ const SlidBar: React.FC<Props> = ({
                     </div>
                 )}
                 {/* website name */}
-                {name && <h1 className="text-2xl text-zinc-800">أمين ستور</h1>}
+                {name && <h1 className="text-2xl " style={{ color: nameColor || "black" }}>أمين ستور</h1>}
                 {/* search bar */}
                 {searchBar && <div className="w-full h-16 relative"><SearchBar /></div>}
                 {/* links */}
-                {sidBarLink.map((t, index) => show(t, index))}
+                {sidBarLink.map((t, index) => show(t as any, index))}
             </div>
             {/* divider */}
-            <div className="h-[1px] ml-2 w-full bg-zinc-300 rounded-full"></div>
+            {categoriesSection && <div className="h-[1px] ml-2 w-full bg-zinc-300 rounded-full" style={{ backgroundColor: dividerColor }}></div>}
             <div className="grid grid-cols-3 gap-4 my-2">
                 {/* categories */}
                 {categoriesSection && (
                     Array.from({ length: 6 }).map((_, index) => (
-                        <div key={index} className="grid place-content-center py-2 rounded bg-gray-100">
-                            <h1>التصنيف 1</h1>
+                        <div key={index} className="grid place-content-center py-2 rounded bg-gray-100 hover:bg-gray-200 cursor-pointer"
+                            style={{ backgroundColor: categoryBgColor }}
+                        >
+                            <h1 style={{ color: categoryTextColor || "gray" }}>التصنيف 1</h1>
                         </div>
                     ))
                 )}
             </div>
             {/* divider */}
-            <div className="h-[1px] ml-2 w-full bg-zinc-300 rounded-full"></div>
+            {sclMediaSection && <div className="h-[1px] ml-2 w-full bg-zinc-300 rounded-full" style={{ backgroundColor: dividerColor }}></div>}
             {/* scl media */}
             <div className="flex items-center justify-center gap-x-3 p-2">
                 {
                     sclMediaSection && (
-                        Array.from({length:4}).map((_ , id)=>(
+                        Array.from({ length: 4 }).map((_, id) => (
                             <div className="w-full" key={id}>
-                            <img alt="facebook" className="w-16" src={facebook} />
-                        </div>
+                                <img alt="facebook" className="w-16" src={facebook} />
+                            </div>
                         ))
                     )
                 }
