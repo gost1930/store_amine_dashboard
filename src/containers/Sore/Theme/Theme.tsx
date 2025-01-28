@@ -1,6 +1,6 @@
 // components
 import { Outlet } from "react-router-dom";
-import {PageTile , PageDesc} from "../../components";
+import {PageTile , PageDesc} from "../../../components/index.ts";
 import Links from "./Links.tsx";
 
 const Theme = () => {

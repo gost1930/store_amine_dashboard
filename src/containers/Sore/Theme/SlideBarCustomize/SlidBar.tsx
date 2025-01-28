@@ -1,11 +1,11 @@
 // component
-import { SearchBar } from "../../../components";
+import { SearchBar } from "../../../../components";
 // var
-import { sidBarLink } from "../../../utils/Variables/pagesLinks";
+import { sidBarLink } from "../../../../utils/Variables/pagesLinks";
 // framer-motion
 import { motion } from "framer-motion";
 // image
-import facebook from "../../../assets/facebook.png"
+import facebook from "../../../../assets/facebook.png"
 
 interface Props {
     logo: boolean;

@@ -3,7 +3,7 @@
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { FaRegCopy } from "react-icons/fa6";
 // component
-import { Button } from "../../../components"
+import { Button } from "../../../../components"
 import { useState } from "react";
 
 interface ThankYouProps {

@@ -8,7 +8,8 @@ import {
   CategoryCusomize,
   NavBarCustomize,
   SlideBarCustomize,
-  ThanksPageCustomize
+  ThanksPageCustomize,
+  MainPage
 } from "./containers";
 // pages
 import { Store } from "./pages";
@@ -33,6 +34,8 @@ const App = () => {
                 {/* <Route path="notification" element={<h1>cards</h1>} /> */}
                 <Route path="thankyou" element={<ThanksPageCustomize />} />
               </Route>
+              {/* Main Page */}
+              <Route path="main_page" element={<MainPage />} />
             </Route>
           </Routes>
         </GeneralPage>

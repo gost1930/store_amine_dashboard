@@ -1,5 +1,5 @@
 import { btn } from "./staticData";
-import { CardMainContainer } from "../../../components";
+import { CardMainContainer } from "../../../../components";
 import StaticCard from "./CardStatic/StaticCard";
 const CategoryCusomize = () => {
   return (

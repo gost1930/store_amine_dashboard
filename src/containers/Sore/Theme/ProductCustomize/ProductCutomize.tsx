@@ -1,7 +1,7 @@
 import DInamiqueCard from "./DInamiqueCard/DInamiqueCard";
 import StaticCard from "./CardStatic/StaticCard";
 import { btn } from "./staticData";
-import { CardMainContainer } from "../../../components";
+import { CardMainContainer } from "../../../../components";
 const ProductCustomize = () => {
   return (
     <CardMainContainer

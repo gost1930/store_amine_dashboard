@@ -1,7 +1,7 @@
 // import React from 'react'
 
 import { useState } from "react"
-import { Button, CheckBox, PageDesc, PageTile } from "../../../components"
+import { Button, CheckBox, PageDesc, PageTile } from "../../../../components"
 // thank you com
 import ThankYou from "./ThankYou"
 

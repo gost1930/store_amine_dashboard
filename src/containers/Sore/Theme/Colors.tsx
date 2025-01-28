@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, PageTile , ColorInput } from "../../components";
+import { Button, PageTile , ColorInput } from "../../../components";
 const Colors = () => {
   const [color, setColor] = useState<string>("#000000");
   return (

@@ -11,3 +11,6 @@ export { default as SearchBar } from "./gen/SearchBar";
 export { default as CheckBox } from "./gen/CheckBox";
 // colorInput
 export { default as ColorInput } from "./gen/ColorInput";
+
+// Modal
+export {default as Modal} from "./gen/Modal";

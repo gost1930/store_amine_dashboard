@@ -1,5 +1,5 @@
 // image
-import img from "../../../../assets/2.jpeg";
+import img from "../../../../../assets/2.jpeg";
 // icon
 import { IoIosArrowRoundBack } from "react-icons/io";
 // framer-motion

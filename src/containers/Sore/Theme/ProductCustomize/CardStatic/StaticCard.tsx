@@ -1,6 +1,6 @@
 import Card from "./Card";
-import { Button } from "../../../../components";
-import { productCardClasses } from "../../../../utils/Variables/classes";
+import { Button } from "../../../../../components";
+import { productCardClasses } from "../../../../../utils/Variables/classes";
 
 const StaticCard = () => {
   return (

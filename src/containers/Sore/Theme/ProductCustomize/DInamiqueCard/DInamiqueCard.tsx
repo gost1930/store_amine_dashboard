@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import img from "../../../../assets/2.jpeg";
+import img from "../../../../../assets/2.jpeg";
 import StyleProduct from "./StylesProduct";
-import { Button } from "../../../../components";
+import { Button } from "../../../../../components";
 
 const DInamiqueCard = () => {
   const [styles, setStyles] = useState({

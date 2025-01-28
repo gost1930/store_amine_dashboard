@@ -1,9 +1,9 @@
 // import React from 'react'
 // component
 import { useState } from "react"
-import { Button, CheckBox, PageTile, ColorInput } from "../../../components"
+import { Button, CheckBox, PageTile, ColorInput } from "../../../../components"
 import SlidBar from "./SlidBar"
-import { changes } from "../../../utils/Variables/slideVar"
+import { changes } from "../../../../utils/Variables/slideVar"
 
 // state type
 type Styles = {

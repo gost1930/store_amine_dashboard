@@ -3,7 +3,7 @@ import React from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { CiShoppingCart } from "react-icons/ci";
 // component
-import { SearchBar } from "../../../components";
+import { SearchBar } from "../../../../components";
 
 interface INavBar {
   btn: boolean;

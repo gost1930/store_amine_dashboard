@@ -1,5 +1,5 @@
 // images
-import img from "../../../../assets/2.jpeg";
+import img from "../../../../../assets/2.jpeg";
 // framer-motion
 import {motion} from "framer-motion"
 interface ICard {
