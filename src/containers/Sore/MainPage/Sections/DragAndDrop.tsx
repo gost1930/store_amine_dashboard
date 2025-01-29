@@ -1,6 +1,6 @@
 // import React from 'react'
 import SecUi from "./SecUi"
-import { SortableContext, verticalListSortingStrategy , useSortable } from '@dnd-kit/sortable';
+import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable';
 
 const DragAndDrop = ({ sec }: { sec: any }) => {
   return (
