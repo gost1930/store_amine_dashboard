@@ -1,4 +1,4 @@
-import Card from "./Card";
+import {Card} from "../../../../../components";
 import { Button } from "../../../../../components";
 import { productCardClasses } from "../../../../../utils/Variables/classes";
 

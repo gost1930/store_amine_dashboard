@@ -1,5 +1,5 @@
 // images
-import img from "../../../../../assets/2.jpeg";
+import img from "../../assets/2.jpeg";
 // framer-motion
 import {motion} from "framer-motion"
 interface ICard {
@@ -18,8 +18,6 @@ const Card: React.FC<ICard> = ({
 }) => {
   return (
     <motion.div
-    initial={{ scale: 0.5 , opacity:0 }}
-    animate={{ scale: 1 , opacity:1}}
       className={`border cursor-pointer relative rounded-xl w-full h-fit flex flex-col ${parentClassName}`}
     >
       {/* img */}

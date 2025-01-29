@@ -10,8 +10,7 @@ const GeneralSideBar = ({ isOpen, setIsOpen }: any) => {
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
-    const {pathname} = useLocation();
-    console.log(useLocation())
+  const { pathname } = useLocation();
   const toggleSubLinks = (linkName: string) => {
     setOpenSubLinks(openSubLinks === linkName ? null : linkName);
   };
@@ -85,8 +84,8 @@ const GeneralSideBar = ({ isOpen, setIsOpen }: any) => {
                 >
                   <motion.div
                     className={` py-2 px-3 my-1 rounded-xl hover:bg-primary ${pathname === link.path
-                        ? "bg-primary text-white"
-                        : "hover:text-white"
+                      ? "bg-primary text-white"
+                      : "hover:text-white"
                       }  
                   flex justify-between items-center`}
                     onClick={() =>
@@ -114,8 +113,8 @@ const GeneralSideBar = ({ isOpen, setIsOpen }: any) => {
                 >
                   <motion.div
                     className={` py-2 px-3 my-1 rounded-xl hover:bg-primary ${openSubLinks === link.name
-                        ? "bg-primary text-white"
-                        : "hover:text-white"
+                      ? "bg-primary text-white"
+                      : "hover:text-white"
                       }  
                   flex justify-between items-center`}
                     onClick={() =>
@@ -174,8 +173,8 @@ const GeneralSideBar = ({ isOpen, setIsOpen }: any) => {
               >
                 <motion.div
                   className={` py-2 px-3 my-1 rounded-xl hover:bg-primary ${openSubLinks === link.name
-                      ? "bg-primary text-white"
-                      : "hover:text-white"
+                    ? "bg-primary text-white"
+                    : "hover:text-white"
                     }  
                   flex justify-between items-center`}
                   onClick={() =>
