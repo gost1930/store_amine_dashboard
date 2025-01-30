@@ -1,4 +1,4 @@
-import Card from "./Card";
+import Card from "../../../../../components/CategoryCardStatic/Card";
 import { Button } from "../../../../../components";
 import { categotyCardClasses } from "../../../../../utils/Variables/classes";
 

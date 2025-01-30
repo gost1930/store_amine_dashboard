@@ -1,4 +1,4 @@
-import {Card} from "../../../../../components";
+import {CardProduct} from "../../../../../components";
 import { Button } from "../../../../../components";
 import { productCardClasses } from "../../../../../utils/Variables/classes";
 
@@ -13,7 +13,7 @@ const StaticCard = () => {
               <input type="radio" name="card" id={card.name} className="ml-2" />
               <label htmlFor={card.name}>{card.name}</label>
             </div>
-            <Card key={index} {...card} />
+            <CardProduct key={index} {...card} />
           </div>
         ))}
       </div>

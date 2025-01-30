@@ -4,12 +4,18 @@ import { DndContext, KeyboardSensor, PointerSensor, TouchSensor, closestCorners,
 // drag and drop
 import DragAndDrop from './DragAndDrop';
 import { arrayMove, sortableKeyboardCoordinates } from '@dnd-kit/sortable';
+// icons
+// import { CiWarning } from "react-icons/ci";
+// components
+import { CardProduct , CardCategory } from '../../../../components';
+// static classes
+import {categotyCardClasses, productCardClasses} from "../../../../utils/Variables/classes"
 
 const Sections = () => {
   const [sec, setSec] = useState([
-    { id: 1, title: 'as', k: 1 },
-    { id: 2, title: 'ds', k: 2 },
-    { id: 3, title: 'as', k: 3 },
+    { id: 1, title: 'جميع التصنيفات', k: 2, card: [<CardCategory {...categotyCardClasses[1]} /> , <CardCategory {...categotyCardClasses[1]} /> , <CardCategory {...categotyCardClasses[1]} />] },
+    { id: 2, title: 'التخفيضات', k: 3, card: [<CardProduct {...productCardClasses[2]} /> , <CardProduct {...productCardClasses[2]} /> , <CardProduct {...productCardClasses[2]} />] },
+    { id: 3, title: 'جميع المنتجات', k: 1, card: [<CardProduct {...productCardClasses[2]} /> , <CardProduct {...productCardClasses[2]} /> , <CardProduct {...productCardClasses[2]} />] },
   ])
   const getSecPosition = (id: number) => sec.findIndex(sect => sect.id === id)
   const handleDrageEnd = (event: any) => {
@@ -43,6 +49,7 @@ const Sections = () => {
       <DndContext sensors={sensors} onDragEnd={handleDrageEnd} collisionDetection={closestCorners}>
         <DragAndDrop sec={sec} />
       </DndContext>
+      asdasd
     </section>
   )
 }

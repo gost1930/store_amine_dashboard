@@ -1,7 +1,8 @@
 // images
 import img from "../../assets/2.jpeg";
 // framer-motion
-import {motion} from "framer-motion"
+// import {motion} from "framer-motion"
+
 interface ICard {
   parentClassName?: string;
   parentImageClasseName?: string;
@@ -17,7 +18,7 @@ const Card: React.FC<ICard> = ({
   btnClassName,
 }) => {
   return (
-    <motion.div
+    <div
       className={`border cursor-pointer relative rounded-xl w-full h-fit flex flex-col ${parentClassName}`}
     >
       {/* img */}
@@ -52,7 +53,7 @@ const Card: React.FC<ICard> = ({
           </button>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

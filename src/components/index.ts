@@ -18,4 +18,5 @@ export { default as Modal } from "./gen/Modal";
 export { default as ActionsBtn } from "./gen/ActionsBtn/ActionsBtn";
 export { default as EditBtn } from "./gen/ActionsBtn/EditBtn";
 export { default as DeleteBtn } from "./gen/ActionsBtn/DeleteBtn";
-export {default as Card} from "./ProductCardStatic/Card";
+export {default as CardProduct} from "./ProductCardStatic/Card";
+export {default as CardCategory} from "./CategoryCardStatic/Card";

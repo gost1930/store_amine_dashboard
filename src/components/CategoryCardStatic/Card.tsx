@@ -1,9 +1,9 @@
 // image
-import img from "../../../../../assets/2.jpeg";
+import img from "../../assets/2.jpeg";
 // icon
 import { IoIosArrowRoundBack } from "react-icons/io";
 // framer-motion
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 interface CardProps {
   parentClassName?: string;
@@ -25,9 +25,9 @@ const Card: React.FC<CardProps> = ({
   bgShadow,
 }) => {
   return (
-    <motion.div
-      initial={{ scale: 0.5, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
+    <div
+      // initial={{ scale: 0.5, opacity: 0 }}
+      // animate={{ scale: 1, opacity: 1 }}
       className={`w-full h-fit bg-white cursor-pointer relative ${parentClassName}`}>
       {/* image */}
       <div className={`w-full ${hight} ${parentImageClasseName}`}>
@@ -46,7 +46,7 @@ const Card: React.FC<CardProps> = ({
       <div className={`w-full grid place-content-center p-2 ${parentBtnClassName}`}>
         <button className={` rounded-lg ${btnClassName} flex items-center gap-x-3`}>المزيد <IoIosArrowRoundBack /></button>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
