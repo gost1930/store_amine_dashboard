@@ -9,7 +9,9 @@ import {
   NavBarCustomize,
   SlideBarCustomize,
   ThanksPageCustomize,
-  MainPage
+  MainPage,
+  ConactInfo,
+  Faqs,
 } from "./containers";
 // pages
 import { Store } from "./pages";
@@ -22,6 +24,7 @@ const App = () => {
       <Router>
         <GeneralPage>
           <Routes>
+            {/* store */}
             <Route path="/store" element={<Store />}>
               <Route path="logo" element={<LogoCustomize />} />
               {/* theme routs */}
@@ -36,6 +39,10 @@ const App = () => {
               </Route>
               {/* Main Page */}
               <Route path="main_page" element={<MainPage />} />
+              {/* Contact Info */}
+              <Route path="contact_info" element={<ConactInfo />} />
+              {/* Faqs */}
+              <Route path="faqs" element={<Faqs />} />
             </Route>
           </Routes>
         </GeneralPage>

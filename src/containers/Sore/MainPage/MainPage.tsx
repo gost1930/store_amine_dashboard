@@ -1,6 +1,6 @@
 // import React from 'react'
 // import { useState } from "react";
-import { PageDesc, PageTile, Button } from "../../../components";
+import { PageDesc, PageTile, Button, Divider } from "../../../components";
 // custom hooks
 import { useDisCloser } from "../../../hooks";
 // icons
@@ -21,7 +21,7 @@ const MainPage = () => {
         <AddSections isOpen={isOpen} onClose={onClose} />
       </div>
       {/* divider */}
-      <div className="w-full h-0.5 bg-zinc-200" />
+      <Divider />
 
       <Sections />
     </section>

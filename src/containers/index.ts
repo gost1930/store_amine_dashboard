@@ -11,3 +11,7 @@ export {default as SlideBarCustomize} from "./Sore/Theme/SlideBarCustomize/Slide
 export {default as ThanksPageCustomize} from "./Sore/Theme/ThanksPageCustomize/ThanksPageCustomize";
 // MainPage
 export {default as MainPage} from "./Sore/MainPage/MainPage";
+// Contact Info
+export {default as ConactInfo} from "./Sore/ConactInfo/ConactInfo";
+// Faqs
+export {default as Faqs} from "./Sore/Faqs/Faqs";

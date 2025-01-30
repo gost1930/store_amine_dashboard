@@ -19,6 +19,7 @@ const SecUi = ({ index, s }: { index: number, s: any }) => {
     };
     const { isOpen, onClose , setIsOpen } = useDisCloser()
     const openDeleteModal = (id: any) =>{
+        if(!id) return;
         console.log(id)
         setIsOpen(true)
     }

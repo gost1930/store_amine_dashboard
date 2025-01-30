@@ -19,5 +19,12 @@ export { default as ModalDelete } from "./gen/Modals/ModalDelete";
 export { default as ActionsBtn } from "./gen/ActionsBtn/ActionsBtn";
 export { default as EditBtn } from "./gen/ActionsBtn/EditBtn";
 export { default as DeleteBtn } from "./gen/ActionsBtn/DeleteBtn";
-export {default as CardProduct} from "./ProductCardStatic/Card";
-export {default as CardCategory} from "./CategoryCardStatic/Card";
+export { default as CardProduct } from "./ProductCardStatic/Card";
+export { default as CardCategory } from "./CategoryCardStatic/Card";
+
+// input
+export { default as Input } from "./gen/Input";
+// text area
+export { default as TextArea } from "./gen/TextArea";
+// divider
+export { default as Divider } from "./gen/Divider";
