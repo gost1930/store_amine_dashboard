@@ -33,13 +33,13 @@ const Modal : React.FC<ModalProps> = ({
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="fixed top-0 left-0 bg-gray-500/20 grid place-items-center w-full h-screen z-50"
-      onClick={handleBackdropClick}
+      onMouseDown={handleBackdropClick}
     >
       <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay:0.2}} className="bg-white pt-16 px-4 pb-3 w-fit max-w-xl rounded-2xl relative shadow-xl">
         {/* Close Button */}
         {btnClose && (
           <button
-            onClick={onClose}
+            onMouseDown={onClose}
             className="absolute w-fit -top-4 -right-4 text-black bg-white hover:text-white aspect-square px-3 rounded-full hover:bg-black duration-200"
           >
             <IoMdClose />

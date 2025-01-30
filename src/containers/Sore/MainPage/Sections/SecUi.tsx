@@ -5,7 +5,8 @@ import { CSS } from "@dnd-kit/utilities"
 import { IoIosMove } from "react-icons/io";
 
 // component
-import { DeleteBtn, EditBtn } from "../../../../components";
+import { DeleteBtn, EditBtn, ModalDelete } from "../../../../components";
+import { useDisCloser } from "../../../../hooks";
 
 
 
@@ -16,13 +17,18 @@ const SecUi = ({ index, s }: { index: number, s: any }) => {
         transition,
         transform: CSS.Transform.toString(transform),
     };
+    const { isOpen, onClose , setIsOpen } = useDisCloser()
+    const openDeleteModal = (id: any) =>{
+        console.log(id)
+        setIsOpen(true)
+    }
     const onEditDection = (e: number) => {
         console.log("on edit", e)
     }
     const onDeleteDection = (e: number) => {
         console.log("on delete", e)
     }
-    
+
 
     return (
         <div key={index}
@@ -53,9 +59,10 @@ const SecUi = ({ index, s }: { index: number, s: any }) => {
                 {/* action btns */}
                 <div className="grid place-content-center gap-3">
                     <EditBtn onClick={() => onEditDection(s.id)} />
-                    <DeleteBtn onClick={() => onDeleteDection(s.id)} />
+                    <DeleteBtn onClick={() => openDeleteModal(s.id)} />
                 </div>
             </div>
+            <ModalDelete isOpen={isOpen} onClose={onClose} title="هل انت متاكد من حذف القسم؟" id={s.id} />
         </div>
     )
 }

@@ -12,8 +12,9 @@ export { default as CheckBox } from "./gen/CheckBox";
 // colorInput
 export { default as ColorInput } from "./gen/ColorInput";
 
-// Modal
-export { default as Modal } from "./gen/Modal";
+// Modals
+export { default as Modal } from "./gen/Modals/Modal";
+export { default as ModalDelete } from "./gen/Modals/ModalDelete";
 
 export { default as ActionsBtn } from "./gen/ActionsBtn/ActionsBtn";
 export { default as EditBtn } from "./gen/ActionsBtn/EditBtn";
