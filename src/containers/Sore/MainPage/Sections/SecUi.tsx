@@ -26,9 +26,9 @@ const SecUi = ({ index, s }: { index: number, s: any }) => {
     const onEditDection = (e: number) => {
         console.log("on edit", e)
     }
-    const onDeleteDection = (e: number) => {
-        console.log("on delete", e)
-    }
+    // const onDeleteDection = (e: number) => {
+    //     console.log("on delete", e)
+    // }
 
 
     return (
