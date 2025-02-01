@@ -29,4 +29,5 @@ export { default as TextArea } from "./gen/TextArea";
 // divider
 export { default as Divider } from "./gen/Divider";
 // text editor
-export {default as TextEditor} from "./TextEditor/TextEditir";
+export { default as TextEditor } from "./TextEditor/TextEditir";
+export { default as StatusDiv } from "./StatusDiv/StatusDiv";

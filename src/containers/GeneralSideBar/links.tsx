@@ -40,7 +40,7 @@ export const links: Link[] = [
     path: "/orders",
     icon: <BsBoxSeam />,
     subLinks: [
-      { name: "كل الطلبات", path: "" },
+      { name: "كل الطلبات", path: "/orders" },
       { name: "الطلبات الجديدة", path: "" },
       { name: "الطلبات المتروكة", path: "" },
     ],

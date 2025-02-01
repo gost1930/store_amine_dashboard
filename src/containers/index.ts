@@ -17,3 +17,6 @@ export {default as ConactInfo} from "./Sore/ConactInfo/ConactInfo";
 export {default as Faqs} from "./Sore/Faqs/Faqs";
 // About
 export {default as About} from "./Sore/About/About";
+
+// Orders
+export {default as AllOrders} from "./Orders/AllOrders";

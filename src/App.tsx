@@ -13,9 +13,11 @@ import {
   ConactInfo,
   Faqs,
   About,
+  // Orders
+  AllOrders,
 } from "./containers";
 // pages
-import { Store } from "./pages";
+import { Store, Orders } from "./pages";
 const App = () => {
   return (
     <section
@@ -35,7 +37,6 @@ const App = () => {
                 <Route path="category" element={<CategoryCusomize />} />
                 <Route path="navbar" element={<NavBarCustomize />} />
                 <Route path="list" element={<SlideBarCustomize />} />
-                {/* <Route path="notification" element={<h1>cards</h1>} /> */}
                 <Route path="thankyou" element={<ThanksPageCustomize />} />
               </Route>
               {/* Main Page */}
@@ -46,6 +47,10 @@ const App = () => {
               <Route path="faqs" element={<Faqs />} />
               {/* About */}
               <Route path="about" element={<About />} />
+            </Route>
+            {/* orders */}
+            <Route path="/orders" element={<Orders />} >
+              <Route path="" element={<AllOrders />} />
             </Route>
           </Routes>
         </GeneralPage>
