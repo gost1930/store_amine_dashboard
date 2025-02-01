@@ -7,6 +7,7 @@ import FaqsAE from "../AddEditFaqs/FaqsAE";
 import { useState, useCallback } from "react";
 
 interface SectionProps {
+    index: number;
     s: {
         id: number;
         k: number;
@@ -16,7 +17,7 @@ interface SectionProps {
     };
 }
 
-const SecUi: React.FC<SectionProps> = ({ s }) => {
+const SecUi: React.FC<SectionProps> = ({ index, s }) => {
     const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: s.id });
     const style = { transition, transform: CSS.Transform.toString(transform) };
 
@@ -27,7 +28,7 @@ const SecUi: React.FC<SectionProps> = ({ s }) => {
     const openDeleteModal = useCallback(() => setIsOpen(true), [setIsOpen]);
 
     return (
-        <div key={s.id} className='my-2' ref={setNodeRef} style={style} {...attributes} {...listeners}>
+        <div key={index} className='my-2' ref={setNodeRef} style={style} {...attributes} {...listeners}>
             <h1 className="text-slate-800 text-lg">
                 القسم #{s.k} : <span className="text-primary">{s.title}</span>
             </h1>

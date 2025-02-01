@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface Props {
-    color: string;
+    color: any;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     name?: string;
     id?: any;

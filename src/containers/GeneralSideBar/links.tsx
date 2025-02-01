@@ -32,7 +32,7 @@ export const links: Link[] = [
       { name: "الصفحة الرئيسية", path: "/store/main_page" },
       { name: "معلومات الإتصال", path: "/store/contact_info" },
       { name: "الأسئلة الشائعة", path: "/store/faqs" },
-      { name: "حول المتجر", path: "/store/as" },
+      { name: "حول المتجر", path: "/store/about" },
     ],
   },
   {

@@ -15,3 +15,5 @@ export {default as MainPage} from "./Sore/MainPage/MainPage";
 export {default as ConactInfo} from "./Sore/ConactInfo/ConactInfo";
 // Faqs
 export {default as Faqs} from "./Sore/Faqs/Faqs";
+// About
+export {default as About} from "./Sore/About/About";

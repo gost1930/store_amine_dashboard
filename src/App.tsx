@@ -12,6 +12,7 @@ import {
   MainPage,
   ConactInfo,
   Faqs,
+  About,
 } from "./containers";
 // pages
 import { Store } from "./pages";
@@ -43,6 +44,8 @@ const App = () => {
               <Route path="contact_info" element={<ConactInfo />} />
               {/* Faqs */}
               <Route path="faqs" element={<Faqs />} />
+              {/* About */}
+              <Route path="about" element={<About />} />
             </Route>
           </Routes>
         </GeneralPage>

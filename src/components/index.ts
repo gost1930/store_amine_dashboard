@@ -28,3 +28,5 @@ export { default as Input } from "./gen/Input";
 export { default as TextArea } from "./gen/TextArea";
 // divider
 export { default as Divider } from "./gen/Divider";
+// text editor
+export {default as TextEditor} from "./TextEditor/TextEditir";
