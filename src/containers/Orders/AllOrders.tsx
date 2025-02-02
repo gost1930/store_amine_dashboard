@@ -8,10 +8,10 @@ const AllOrders = () => {
     <section className='w-full h-fit'>
       <PageTile title='حالة الطلبات' className='' />
 
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap gap-3 mb-3">
         {
           ordersStatus.map((s, index) => (
-            <StatusDiv key={index} index={index} title={s.title} value={s.value} color={s.color} icon={<s.icon />} />
+            <StatusDiv key={index} index={index} title={s.title} value={s.value} icon={<s.icon />} className={s.className} />
           ))
         }
       </div>
