@@ -31,3 +31,5 @@ export { default as Divider } from "./gen/Divider";
 // text editor
 export { default as TextEditor } from "./TextEditor/TextEditir";
 export { default as StatusDiv } from "./StatusDiv/StatusDiv";
+// table
+export { default as Table } from "./gen/Table/Table";

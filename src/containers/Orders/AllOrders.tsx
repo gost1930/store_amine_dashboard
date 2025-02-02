@@ -1,8 +1,9 @@
 // component
-import { PageTile, StatusDiv } from '../../components'
+import { PageTile, StatusDiv , Table } from '../../components'
 import FilterUi from "./FilterUi/FilterUi"
 // static data
 import { ordersStatus } from "../../utils/Variables/status";
+import {columns , data} from "../../utils/StaticData/staticData";
 const AllOrders = () => {
   return (
     <section className='w-full h-fit'>
@@ -18,6 +19,9 @@ const AllOrders = () => {
 
       {/* filter */}
       <FilterUi />
+
+      {/* data in table */}
+      <Table columns={columns} data={data} />
     </section>
   )
 }
