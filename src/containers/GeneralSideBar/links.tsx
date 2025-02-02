@@ -43,12 +43,12 @@ export const links: Link[] = [
   },
   {
     name: "المنتجات",
-    path: "/orders",
+    path: "/products",
     icon: <AiOutlineProduct />,
     subLinks: [
-      { name: "الكل", path: "" },
-      { name: "إضافة منتج", path: "" },
-      { name: "مدير المخزون", path: "" },
+      { name: "الكل", path: "/products" },
+      { name: "إضافة منتج", path: "/products/add" },
+      { name: "مدير المخزون", path: "/products/manager" },
     ],
   },
   {

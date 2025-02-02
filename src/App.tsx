@@ -15,9 +15,12 @@ import {
   About,
   // Orders
   AllOrders,
+  // products
+  AllProducts,
+  AddProduct,
 } from "./containers";
 // pages
-import { Store, Orders } from "./pages";
+import { Store, Orders, Products } from "./pages";
 const App = () => {
   return (
     <section
@@ -51,6 +54,11 @@ const App = () => {
             {/* orders */}
             <Route path="/orders" element={<Orders />} >
               <Route path="" element={<AllOrders />} />
+            </Route>
+            {/* Products */}
+            <Route path="/products" element={<Products />} >
+              <Route path="" element={<AllProducts />} />
+              <Route path="add" element={<AddProduct />} />
             </Route>
           </Routes>
         </GeneralPage>

@@ -18,7 +18,7 @@ const Table: React.FC<TableProps> = ({ columns, data }) => {
     const colKey = Object.keys(columns)
 
     return (
-        <div className="overflow-y-scroll h-fit">
+        <div className="w-full h-fit">
             <table className="min-w-full bg-white border border-zinc-200 rounded-lg">
                 <thead className="bg-gray-100 border-b border-zinc-200">
                     <tr>
@@ -33,7 +33,7 @@ const Table: React.FC<TableProps> = ({ columns, data }) => {
                     {data.map((row) => (
                         <tr key={row.id} className="border-b border-zinc-200">
                             {colKey.map((column, colIndex) => (
-                                <td key={colIndex} className="p-3 border-x">
+                                <td key={colIndex} className="p-3">
                                     {row[column]}
                                 </td>
                             ))}

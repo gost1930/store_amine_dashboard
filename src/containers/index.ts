@@ -20,3 +20,7 @@ export {default as About} from "./Sore/About/About";
 
 // Orders
 export {default as AllOrders} from "./Orders/AllOrders";
+
+// Products
+export {default as AllProducts} from "./Products/AllProducts";
+export {default as AddProduct} from "./Products/AddProduct/AddProduct";
