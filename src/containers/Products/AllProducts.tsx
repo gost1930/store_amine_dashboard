@@ -12,7 +12,7 @@ const AllProducts = () => {
         <div className='w-full md:w-[80%] h-fit'>
             <div className="flex items-center justify-between w-full">
                 <PageTile title='الإحصائيات' />
-                <Link to="/products/add-product">
+                <Link to="/products/add">
                     <Button text="إضافة منتج" className="mt-10 h-fit bg-primary" icon={<IoMdAdd />} />
                 </Link>
             </div>

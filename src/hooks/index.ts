@@ -1,1 +1,2 @@
-export {default as useDisCloser} from "./UseDisCloser";
+export {default as useDisCloser} from "./useDisCloser";
+export {default as useHandleHTextEditor} from "./useHandleHTextEditor";
