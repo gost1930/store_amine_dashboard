@@ -1,4 +1,3 @@
-import React from 'react'
 // components
 import { PageTile, Input, TextEditor, Button } from '../../../../components';
 // hooks
