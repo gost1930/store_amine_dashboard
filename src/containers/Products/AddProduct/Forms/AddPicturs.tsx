@@ -11,9 +11,10 @@ const AddPicturs = () => {
     const [pictures, setPictures] = useState<File[]>([]);
 
     const getPic = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const picLimited = 5;
         if (e.target.files) {
             const newFiles = Array.from(e.target.files);
-            if(pictures.length + newFiles.length > 5) return alert("لا يمكن اضافة اكثر من 5 صور");
+            if (pictures.length + newFiles.length > picLimited) return alert("لا يمكن اضافة اكثر من 5 صور");
             setPictures((prev) => [...prev, ...newFiles]);
         }
     };
