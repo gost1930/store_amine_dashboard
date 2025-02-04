@@ -7,7 +7,7 @@ const Colors = () => {
     const [colors, setColors] = useState<{ color: string; name: string }[]>([]);
 
     const addColorInp = () => {
-        setColors(prev => [...prev, { color: "white", name: "white" }]);
+        setColors(prev => [...prev, { color: "green", name: "green" }]);
     };
 
     const handlColor = (e: any, id: number) => {
@@ -45,6 +45,7 @@ const Colors = () => {
                                 id={`colorQuantity-${index}`}
                                 placeholder="إسم اللون"
                                 onChange={(e) => hadleNameColor(e, index)}
+                                value={color.name}
                             />
                         </div>
                         <CiTrash
@@ -53,31 +54,36 @@ const Colors = () => {
                         />
                     </div>
                 ))}
-                <Button type="button" onClick={clearAllColors} text="مسح الكل" className="bg-primary text-lg" icon={<CiTrash />} />
+                {colors.length > 0 && <Button type="button" onClick={clearAllColors} text="إزالة كل الألوان" className="bg-red1 text-lg" icon={<CiTrash />} />}
 
             </div>
-            <div className="w-full h-fit p-3">
-                <PageTile title="معاينة" />
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                    {
-                        colors.map((colors, index) => (
-                            <div key={index} className="relative flex gap-x-2 items-end">
-                                <div dir="ltr" key={index} className="checkbox-wrapper-7">
-                                    <CheckBox name={colors.name} id={colors.name} />
-                                    <label htmlFor={colors.name} className="tgl-btn"></label>
-                                </div>
-                                <div className="w-10 h-10 rounded-full border" style={{ backgroundColor: colors.color }}></div>
-                                <p>{colors.name}</p>
-                            </div>
-                        ))
-                    }
-                </div>
-            </div>
+            {
+                colors.length > 0 && (
+                    <div className="w-full h-fit p-3">
+                        <PageTile title="معاينة" />
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                            {
+                                colors.map((colors, index) => (
+                                    <div key={index} className="relative flex gap-x-2 items-end">
+                                        <div dir="ltr" key={index} className="checkbox-wrapper-7">
+                                            <CheckBox name={colors.name} id={colors.name} defaultChecked={true} />
+                                            <label htmlFor={colors.name} className="tgl-btn"></label>
+                                        </div>
+                                        <div className="w-10 h-10 rounded-full border" style={{ backgroundColor: colors.color }}></div>
+                                        <p>{colors.name}</p>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+
+                )
+            }
             <Button
                 type="button"
                 onClick={addColorInp}
                 text="اضافة لون"
-                className="bg-primary text-lg"
+                className="bg-primary text-lg w-fit self-end"
                 icon={<IoAdd />}
             />
         </div>

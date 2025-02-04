@@ -26,9 +26,7 @@ const TextEditor = ({ content , handleChange }: { content: string  , handleChang
 
     return (
         <div className="p-4 w-full">
-            <h2 className="text-xl font-semibold mb-2">React Quill Editor</h2>
             <ReactQuill value={content} onChange={handleChange} modules={modules} className="bg-white" />
-            
             <div className="mt-4 border  rounded-xl ">
                 <h3 className="text-lg mb-8 font-medium p-2">معاينة:</h3>
                 <div dangerouslySetInnerHTML={{ __html: content }} className="border-t p-3" />

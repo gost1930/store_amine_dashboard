@@ -4,13 +4,14 @@ import { PageTile, Input, TextEditor, Button } from '../../../../components';
 import { useHandleHTextEditor } from '../../../../hooks';
 // icon
 import { CiTrash } from "react-icons/ci";
-import { IoAdd } from "react-icons/io5";
+// import { IoAdd } from "react-icons/io5";
 
 
 const GeneralData = () => {
     const { content, clear, handleChange } = useHandleHTextEditor()
+    console.log("conent :", content)
     return (
-        <div className='w-full h-fit'>
+        <div className='w-full h-fit rounded-lg border shadow px-4 pb-4 flex flex-col'>
             <PageTile title='البيانات العامة' />
             {/* form */}
             <div className=''>
@@ -18,10 +19,11 @@ const GeneralData = () => {
                     <Input type="text" name="name" id="name" placeholder="اسم المنتج" label="اسم المنتج" />
                     <Input type="text" name="name" id="name" placeholder="اسم المنتج" label="اسم المنتج" />
                 </div>
+                <PageTile title='وصف المنتج (اختياري)'/>
                 <TextEditor content={content} handleChange={handleChange} />
                 <div className="flex gap-x-3">
-                    <Button type="button" onClick={clear} text="إزالة كل المحتوى" className="mt-4 w-fit bg-black text-lg" icon={<CiTrash />} />
-                    <Button onClick={clear} text="حفظ" className="mt-4 w-fit bg-primary text-lg" icon={<IoAdd />} />
+                    {content.length > 0 && <Button onClick={clear} text="إزالة كل المحتوى" className="mt-4 w-fit bg-red1 text-lg" icon={<CiTrash />} />}
+                    {/* <Button onClick={clear} text="حفظ" className="mt-4 w-fit bg-primary text-lg" icon={<IoAdd />} /> */}
                 </div>
             </div>
         </div>

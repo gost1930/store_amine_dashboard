@@ -4,8 +4,9 @@ interface Props {
     id?: any;
     checked?: any;
     onChange?: any;
+    defaultChecked?: boolean;
 }
-const CheckBox: React.FC<Props> = ({ name, id, checked, onChange }) => {
+const CheckBox: React.FC<Props> = ({ name, id, checked, onChange, defaultChecked }) => {
     return (
         <input
             type="checkbox"
@@ -14,6 +15,7 @@ const CheckBox: React.FC<Props> = ({ name, id, checked, onChange }) => {
             checked={checked}
             onChange={onChange}
             className="tgl tgl-ios"
+            defaultChecked={defaultChecked}
         />
     )
 }

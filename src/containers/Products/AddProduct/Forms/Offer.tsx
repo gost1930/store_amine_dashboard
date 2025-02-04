@@ -15,6 +15,7 @@ const Offer = () => {
     const deleteOffre = (id: number) => {
         setOffers(prev => prev.filter(offer => offer.id !== id));
     };
+    const clearAllOffers =() => setOffers([]);
 
     return (
         <div className="w-full h-fit rounded-lg border shadow px-2 pb-2 flex flex-col">
@@ -29,6 +30,7 @@ const Offer = () => {
                     <CiTrash onClick={() => deleteOffre(offer.id)} className="mt-4 w-fit text-red1 bg-red2 text-5xl rounded-lg -translate-y-1 cursor-pointer" />
                 </div>
             ))}
+            {offers.length > 0 && <Button onClick={clearAllOffers} text="إزالة كل العروض" className="bg-red1 text-lg w-fit" icon={<CiTrash />} />}
             <Button onClick={addOffer} text="اضافة عرض" className="mt-4 w-fit self-end bg-primary text-lg" icon={<IoAdd />} />
         </div>
     );

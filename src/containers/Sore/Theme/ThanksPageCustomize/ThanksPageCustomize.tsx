@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Button, CheckBox, PageDesc, PageTile } from "../../../../components"
-// thank you com
+// thank you component
 import ThankYou from "./ThankYou"
 
 // state type
