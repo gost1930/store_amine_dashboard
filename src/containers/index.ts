@@ -24,3 +24,4 @@ export {default as AllOrders} from "./Orders/AllOrders";
 // Products
 export {default as AllProducts} from "./Products/AllProducts";
 export {default as AddProduct} from "./Products/AddProduct/AddProduct";
+export {default as Inventory} from "./Products/Inventory/Inventory";

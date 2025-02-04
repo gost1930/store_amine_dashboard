@@ -48,7 +48,7 @@ export const links: Link[] = [
     subLinks: [
       { name: "الكل", path: "/products" },
       { name: "إضافة منتج", path: "/products/add" },
-      { name: "مدير المخزون", path: "/products/manager" },
+      { name: "مدير المخزون", path: "/products/inventory" },
     ],
   },
   {
@@ -56,8 +56,8 @@ export const links: Link[] = [
     path: "/orders",
     icon: <TbCategoryPlus />,
     subLinks: [
-      { name: "الكل", path: "" },
-      { name: "إضافة تصنيف", path: "" },
+      { name: "الكل", path: "/categoties" },
+      { name: "إضافة تصنيف", path: "/categoties/add" },
     ],
   },
   {
