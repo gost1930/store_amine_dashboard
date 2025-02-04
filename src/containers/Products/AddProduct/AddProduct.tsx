@@ -1,6 +1,6 @@
 import { PageTile } from '../../../components';
 // forms
-import { GeneralData, AddPicturs, Prices, Offre } from "./Forms";
+import { GeneralData, AddPicturs, Prices, Offer } from "./Forms";
 const AddProduct = () => {
   return (
     <section className='w-full md:w-[80%] h-fit'>
@@ -11,7 +11,7 @@ const AddProduct = () => {
           <GeneralData />
           <AddPicturs />
           <Prices />
-          <Offre />
+          <Offer />
         </div>
       </form>
     </section>
