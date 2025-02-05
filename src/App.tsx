@@ -20,10 +20,12 @@ import {
   AddProduct,
   Inventory,
   // categories
-  AllCategories
+  AllCategories,
+  // WilayaDelev
+  Delivery,
 } from "./containers";
 // pages
-import { Store, Orders, Products, Categoties } from "./pages";
+import { Store, Orders, Products, Categoties , WilayaDelev } from "./pages";
 const App = () => {
   return (
     <section
@@ -67,6 +69,10 @@ const App = () => {
             {/* Categoties */}
             <Route path="/categoties" element={<Categoties />} >
               <Route path="" element={<AllCategories />} />
+            </Route>
+            {/* Wilaya Delivery */}
+            <Route path="/wilaya_delivery" element={<WilayaDelev />}>
+              <Route path="" element={<Delivery />} />
             </Route>
           </Routes>
         </GeneralPage>

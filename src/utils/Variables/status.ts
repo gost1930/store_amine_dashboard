@@ -9,6 +9,7 @@ import { IoClose } from "react-icons/io5";
 import { RiArrowGoBackLine } from "react-icons/ri";
 import { CiBoxes } from "react-icons/ci";
 import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
+import { GrMapLocation } from "react-icons/gr";
 
 export const ordersStatus = [
     { title: "لم يرد على الإتصال... 1", value: 0, className: "text-yellow1 bg-yellow2 border-yellow1", icon: MdOutlinePhoneCallback },
@@ -27,5 +28,11 @@ export const ordersStatus = [
 export const categoriesStatistics = [
     { title: "إجمالي التصنيفات", value: 0, className: "text-green2 bg-green1 border-green2", icon: CiBoxes },
     { title: "التصنيفات الظاهرة في الموقع", value: 0, className: "text-yellow1 bg-yellow2 border-yellow1", icon: MdOutlineVisibility },
-    { title: "التصنيفات المخفية في الموقع", value: 0, className: "text-red1 bg-red2 border-red1", icon: MdOutlineVisibilityOff  },
+    { title: "التصنيفات المخفية في الموقع", value: 0, className: "text-red1 bg-red2 border-red1", icon: MdOutlineVisibilityOff },
+]
+
+export const deliveryStatistics = [
+    { title: "إجمالي الولايات", value: 0, className: "text-green2 bg-green1 border-green2", icon: GrMapLocation },
+    { title: "الولايات الظاهرة في الموقع", value: 0, className: "text-yellow1 bg-yellow2 border-yellow1", icon: MdOutlineVisibility },
+    { title: "الولايات المخفية في الموقع", value: 0, className: "text-red1 bg-red2 border-red1", icon: MdOutlineVisibilityOff },
 ]

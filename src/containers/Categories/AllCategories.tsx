@@ -1,5 +1,5 @@
 // sections 
-import Static from './Static'
+import Statistics from './Statistics'
 import FilterUi from './FilterUi'
 import AddCategory from './AddCategory'
 // component
@@ -15,7 +15,7 @@ const AllCategories = () => {
   return (
     <section className='flex flex-col'>
       <Button text='اضافة فئة' className=' w-fit bg-primary text-xl self-end -translate-y-10' icon={<IoAdd />} onClick={openModal} />
-      <Static />
+      <Statistics />
       <Divider />
       <FilterUi />
       <AddCategory isOpen={isOpen} onClose={onClose} />

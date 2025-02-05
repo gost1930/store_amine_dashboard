@@ -53,21 +53,16 @@ export const links: Link[] = [
   },
   {
     name: "التصنيفات",
-    path: "/orders",
+    path: "/categoties",
     icon: <TbCategoryPlus />,
-    subLinks: [
-      { name: "الكل", path: "/categoties" },
-      { name: "إضافة تصنيف", path: "/categoties/add" },
-    ],
   },
   {
     name: "التوصيل",
-    path: "/orders",
+    path: "/wilaya_delivery",
     icon: <BsTruck />,
     subLinks: [
-      { name: "ولايات التوصيل", path: "" },
-      { name: "إضافة ولاية", path: "" },
-      { name: "شركات التوصيل", path: "" },
+      { name: "ولايات التوصيل", path: "/wilaya_delivery" },
+      { name: "شركات التوصيل", path: "/wilaya_delivery/companies" },
     ],
   },
   {
