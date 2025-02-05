@@ -1,8 +1,19 @@
+/*
+  @name: Modal
+  @description: this is a modal component , it is used to show a modal on the screen
+  @author: @gost1930 | Hadbi Mohamed
+  @example:
+  <Modal isOpen={isOpen} onClose={onClose} insideClick={true} btnClose={true}>
+      "your content here"
+  <Modal>
+
+*/
+
 import React from "react";
 // icons
 import { IoMdClose } from "react-icons/io";
 // framer motion
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 
 
 interface ModalProps {
@@ -12,7 +23,7 @@ interface ModalProps {
   btnClose?: boolean;
   children: React.ReactNode;
 }
-const Modal : React.FC<ModalProps> = ({
+const Modal: React.FC<ModalProps> = ({
   isOpen,
   onClose,
   insideClick,
@@ -35,7 +46,7 @@ const Modal : React.FC<ModalProps> = ({
       className="fixed top-0 left-0 bg-gray-500/20 grid place-items-center w-full h-screen z-50"
       onMouseDown={handleBackdropClick}
     >
-      <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay:0.2}} className="bg-white pt-16 px-4 pb-3 w-fit max-w-xl rounded-2xl relative shadow-xl">
+      <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.2 }} className="bg-white pt-16 px-4 pb-3 w-fit max-w-xl rounded-2xl relative shadow-xl">
         {/* Close Button */}
         {btnClose && (
           <button
