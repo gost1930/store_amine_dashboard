@@ -1,5 +1,5 @@
 // icons
-import { CiInboxOut } from "react-icons/ci";
+import { IoImagesOutline } from "react-icons/io5";
 // components
 import { PageTile } from "../../../../components";
 import { useState } from "react";
@@ -44,7 +44,7 @@ const AddPicturs = () => {
                     className="absolute top-0 bottom-0 left-0 right-0 opacity-0 w-full h-full"
                 />
                 <div className="p-4 border-2 border-dashed rounded-lg space-y-4 flex flex-col items-center justify-center">
-                    <CiInboxOut className="text-7xl text-gray-600" />
+                    <IoImagesOutline className="text-7xl text-gray-600" />
                     <p className="text-center text-gray-500">إضغط هنا لرفع ملفات.</p>
                 </div>
             </div>
