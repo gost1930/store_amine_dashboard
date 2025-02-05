@@ -7,7 +7,7 @@ const Store = () => {
       {/* title */}
       <PgesTitle title="صمِّم " title2="متجرك" />
 
-      <div className="w-full h-fit my5">
+      <div className="w-full h-fit my-5">
         <Outlet />
       </div>
     </div>

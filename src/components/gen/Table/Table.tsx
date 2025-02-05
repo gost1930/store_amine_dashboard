@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
-
+// framer motion
+import { motion } from "framer-motion";
 
 type Row = {
     id: number | string;
@@ -30,14 +31,14 @@ const Table: React.FC<TableProps> = ({ columns, data }) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {data.map((row) => (
-                        <tr key={row.id} className="border-b border-zinc-200">
+                    {data.map((row , index) => (
+                        <motion.tr initial={{ x: 50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.1 * index , duration: 0.2 }} key={row.id} className="border-b border-zinc-200">
                             {colKey.map((column, colIndex) => (
                                 <td key={colIndex} className="p-3">
                                     {row[column]}
                                 </td>
                             ))}
-                        </tr>
+                        </motion.tr>
                     ))}
                 </tbody>
             </table>

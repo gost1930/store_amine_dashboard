@@ -7,7 +7,7 @@ const Products = () => {
       {/* title */}
       <PgesTitle title="إدارة " title2="المنتجات" />
 
-      <div className="w-full h-fit my5">
+      <div className="w-full h-fit my-5">
         <Outlet />
       </div>
     </div>

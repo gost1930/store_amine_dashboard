@@ -19,9 +19,11 @@ import {
   AllProducts,
   AddProduct,
   Inventory,
+  // categories
+  AllCategories
 } from "./containers";
 // pages
-import { Store, Orders, Products , Categoties } from "./pages";
+import { Store, Orders, Products, Categoties } from "./pages";
 const App = () => {
   return (
     <section
@@ -63,7 +65,9 @@ const App = () => {
               <Route path="inventory" element={<Inventory />} />
             </Route>
             {/* Categoties */}
-            <Route path="/categoties" element={<Categoties />} />
+            <Route path="/categoties" element={<Categoties />} >
+              <Route path="" element={<AllCategories />} />
+            </Route>
           </Routes>
         </GeneralPage>
       </Router>

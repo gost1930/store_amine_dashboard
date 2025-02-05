@@ -7,6 +7,8 @@ import { BsTruck } from "react-icons/bs";
 import { LiaUserCheckSolid } from "react-icons/lia";
 import { IoClose } from "react-icons/io5";
 import { RiArrowGoBackLine } from "react-icons/ri";
+import { CiBoxes } from "react-icons/ci";
+import { MdOutlineVisibility, MdOutlineVisibilityOff } from "react-icons/md";
 
 export const ordersStatus = [
     { title: "لم يرد على الإتصال... 1", value: 0, className: "text-yellow1 bg-yellow2 border-yellow1", icon: MdOutlinePhoneCallback },
@@ -20,4 +22,10 @@ export const ordersStatus = [
     { title: "ملغاة من المتجر", value: 0, className: "text-red1 bg-red2 border-red1", icon: IoClose },
     { title: "ملغاة من الزبون", value: 0, className: "text-red1 bg-red2 border-red1", icon: IoClose },
     { title: "مرتجع", value: 0, className: "text-red1 bg-red2 border-red1", icon: RiArrowGoBackLine },
+]
+
+export const categoriesStatistics = [
+    { title: "إجمالي التصنيفات", value: 0, className: "text-green2 bg-green1 border-green2", icon: CiBoxes },
+    { title: "التصنيفات الظاهرة في الموقع", value: 0, className: "text-yellow1 bg-yellow2 border-yellow1", icon: MdOutlineVisibility },
+    { title: "التصنيفات المخفية في الموقع", value: 0, className: "text-red1 bg-red2 border-red1", icon: MdOutlineVisibilityOff  },
 ]

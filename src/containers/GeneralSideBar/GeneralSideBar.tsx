@@ -107,7 +107,7 @@ const GeneralSideBar = ({ isOpen, setIsOpen }: any) => {
                 </Link>
               ) : (
                 <div
-                  className={`flex flex-col ${!isOpen && "items-end -translate-x-2 lg:translate-x-1 cursor-pointer"
+                  className={`flex flex-col cursor-pointer ${!isOpen && "items-end -translate-x-2 lg:translate-x-1"
                     }`}
                   onClick={() => logicforSlide(link)}
                 >
