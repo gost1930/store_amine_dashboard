@@ -7,7 +7,7 @@ const classes = "w-full mt-2 h-12 px-2 rounded-lg focus:outline-none focus:ring-
 const FilterUi = () => {
     return (
         <section>
-            <PageTile title="الفالتر" />
+            <PageTile title="الفلترة" />
             <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-3 p-3">
                 {/* wilaya */}
                 <Input label="الإسم" type="text" name="wilayaName" id="wilayaName" htmlFor="wilayaName" placeholder="البحث بإسم الولاية" />

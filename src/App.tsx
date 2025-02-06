@@ -25,7 +25,7 @@ import {
   Delivery,
 } from "./containers";
 // pages
-import { Store, Orders, Products, Categoties , WilayaDelev } from "./pages";
+import { Store, Orders, Products, Categoties, WilayaDelev, Reviews, PageNotFound } from "./pages";
 const App = () => {
   return (
     <section
@@ -74,6 +74,9 @@ const App = () => {
             <Route path="/wilaya_delivery" element={<WilayaDelev />}>
               <Route path="" element={<Delivery />} />
             </Route>
+            {/* Reviews */}
+            <Route path="/reviews" element={<Reviews />} />
+            <Route path="/*" element={<PageNotFound />} />
           </Routes>
         </GeneralPage>
       </Router>

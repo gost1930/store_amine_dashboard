@@ -1,8 +1,7 @@
 // component
 import { Modal, Input, Button, PageTile, CheckBox } from "../../components"
 // icons
-import { IoAdd, IoImagesOutline } from "react-icons/io5";
-import { IoMdInformationCircleOutline } from "react-icons/io";
+import { IoAdd } from "react-icons/io5";
 
 
 const AddWilaya = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {

@@ -1,11 +1,14 @@
 // components
-import { Input, PageTile, Table } from "../../../components";
+import { PageTile, Table } from "../../../components";
 import { columns, data } from "../../../utils/StaticData/staticData";
+import Statistics from "./Statistics";
 
 const Inventory = () => {
   return (
     <section className='w-full md:w-[90%] h-full'>
 
+      <PageTile title="الإحصائيات" />
+      <Statistics />
       <PageTile title="الفلترة" />
 
       <div className="grid md:grid-cols-2 gap-3">

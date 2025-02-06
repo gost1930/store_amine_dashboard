@@ -21,7 +21,7 @@ export default {
         purple1: "#a855f7",
         purple2: "#e9d5ff",
         black: "#000000",
-      }
+      },
     },
   },
   plugins: [],

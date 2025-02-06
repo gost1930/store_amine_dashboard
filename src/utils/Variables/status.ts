@@ -36,3 +36,10 @@ export const deliveryStatistics = [
     { title: "الولايات الظاهرة في الموقع", value: 0, className: "text-yellow1 bg-yellow2 border-yellow1", icon: MdOutlineVisibility },
     { title: "الولايات المخفية في الموقع", value: 0, className: "text-red1 bg-red2 border-red1", icon: MdOutlineVisibilityOff },
 ]
+
+export const productsStatistics = [
+    { title: "إجمالي المنتجات", value: 0, className: "text-blue1 bg-blue2 border-blue1", icon: CiBoxes },
+    { title: "مخزون المنتجات الخاضعة للمراقبة", value: 0, className: "text-yellow1 bg-yellow2 border-yellow1", icon: MdOutlineVisibility },
+    { title: "المنتجات المتوفرة في المخزون", value: 0, className: "text-green2 bg-green1 border-green2", icon: MdOutlineVisibilityOff },
+    { title: "المنتجات غير المتوفرة في المخزون", value: 0, className: "text-red1 bg-red2 border-red1", icon: MdOutlineVisibilityOff },
+]
