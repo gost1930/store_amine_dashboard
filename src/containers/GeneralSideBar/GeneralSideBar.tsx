@@ -11,6 +11,8 @@ const GeneralSideBar = ({ isOpen, setIsOpen }: any) => {
     setIsOpen(!isOpen);
   };
   const { pathname } = useLocation();
+  const openSubLinks2 = "/" + pathname.split("/").filter(item => item.trim() !== '')[0];
+  console.log(openSubLinks2)
   const toggleSubLinks = (linkName: string) => {
     setOpenSubLinks(openSubLinks === linkName ? null : linkName);
   };
@@ -43,6 +45,7 @@ const GeneralSideBar = ({ isOpen, setIsOpen }: any) => {
       openSlide();
     }
   };
+  // console.log("openSubLinks :", openSubLinks2)
   return (
     <div
       className={`side-bar absolute top-0 ${!isOpen ? "-right-[80%] md:-right-[20%]" : "right-0"
@@ -112,9 +115,9 @@ const GeneralSideBar = ({ isOpen, setIsOpen }: any) => {
                   onClick={() => logicforSlide(link)}
                 >
                   <motion.div
-                    className={` py-2 px-3 my-1 rounded-xl hover:bg-primary ${openSubLinks === link.name
+                    className={` py-2 px-3 my-1 rounded-xl  ${openSubLinks2 === link.path
                       ? "bg-primary text-white"
-                      : "hover:text-white"
+                      : "hover:text-white hover:bg-primary"
                       }  
                   flex justify-between items-center`}
                     onClick={() =>

@@ -2,7 +2,7 @@
 import { Modal, Button, TextArea, Input } from "../../../../components";
 // icons
 import { MdAdd } from "react-icons/md";
-import { useDisCloser } from "../../../../hooks";
+import { useDisCloser } from "../../../../utils/hooks";
 interface Props {
     isOpen: boolean;
     onClose: () => void;

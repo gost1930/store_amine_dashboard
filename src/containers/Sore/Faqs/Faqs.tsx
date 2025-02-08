@@ -1,7 +1,7 @@
 // import React from 'react'
 // components
 import { PageTile, PageDesc, Button, Divider } from "../../../components"
-import { useDisCloser } from "../../../hooks";
+import { useDisCloser } from "../../../utils/hooks";
 // icons
 import { MdAdd } from "react-icons/md";
 // faqs function

@@ -31,3 +31,9 @@ export { default as AllCategories } from "./Categories/AllCategories";
 
 // Delivery Willaya
 export { default as Delivery } from "./Delivery/Delivery";
+
+// Reviews
+export {default as Reviews} from "./Reviews/Reviews";
+
+// Statistics
+export {default as Statistics} from "./Statistics/Statistics";

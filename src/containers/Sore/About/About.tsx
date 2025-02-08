@@ -4,7 +4,7 @@ import { TextEditor, PageTile, PageDesc , Button } from "../../../components";
 import { CiTrash } from "react-icons/ci";
 import { IoAdd } from "react-icons/io5";
 // hooks
-import {useHandleHTextEditor} from "../../../hooks"
+import {useHandleHTextEditor} from "../../../utils/hooks"
 const About = () => {
   const {content , handleChange , clear} = useHandleHTextEditor()
   return (

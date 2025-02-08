@@ -1,17 +1,17 @@
 import { PgesTitle } from "../components";
 // containers
-import { Reviews as Rev } from "../containers";
-const Reviews = () => {
+import { Statistics as Stat } from "../containers";
+const Statistics = () => {
     return (
         <div className="w-full md:w-[90%] h-fit">
             {/* title */}
-            <PgesTitle title="آراء " title2=" الزبائن" />
+            <PgesTitle title="الإحصائيات" title2="" />
 
             <div className="w-full h-fit my-5">
-                <Rev />
+                <Stat />
             </div>
         </div>
     );
 };
 
-export default Reviews;
+export default Statistics;

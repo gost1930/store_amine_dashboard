@@ -6,7 +6,7 @@ import { IoIosMove } from "react-icons/io";
 
 // component
 import { DeleteBtn, EditBtn, ModalDelete } from "../../../../components";
-import { useDisCloser } from "../../../../hooks";
+import { useDisCloser } from "../../../../utils/hooks";
 
 
 

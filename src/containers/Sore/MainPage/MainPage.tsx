@@ -2,7 +2,7 @@
 // import { useState } from "react";
 import { PageDesc, PageTile, Button, Divider } from "../../../components";
 // custom hooks
-import { useDisCloser } from "../../../hooks";
+import { useDisCloser } from "../../../utils/hooks";
 // icons
 import AddSections from "./AddSections/AddSections";
 // sections

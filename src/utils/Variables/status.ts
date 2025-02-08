@@ -43,3 +43,7 @@ export const productsStatistics = [
     { title: "المنتجات المتوفرة في المخزون", value: 0, className: "text-green2 bg-green1 border-green2", icon: MdOutlineVisibilityOff },
     { title: "المنتجات غير المتوفرة في المخزون", value: 0, className: "text-red1 bg-red2 border-red1", icon: MdOutlineVisibilityOff },
 ]
+
+export const reviewsStatistic =[
+    { title: "اجمالي التقييمات", value: 0, className: "text-green2 bg-green1 border-green2", icon: MdOutlineVisibility },
+]

@@ -67,17 +67,17 @@ export const links: Link[] = [
   },
   {
     name: "آراء الزبائن",
-    path: "/orders",
+    path: "/reviews",
     icon: <IoIosStarOutline />,
     subLinks: [],
   },
   { name: "الدومين", path: "/orders", icon: <FaEarthAmericas />, subLinks: [] },
   {
     name: "الإحصائيات",
-    path: "/orders",
+    path: "/statistics",
     icon: <LuChartSpline />,
     subLinks: [
-      { name: "عام", path: "" },
+      { name: "عام", path: "/statistics" },
       { name: "المنتجات", path: "" },
       { name: "الزيارات", path: "" },
     ],

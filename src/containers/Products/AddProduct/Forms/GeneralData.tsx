@@ -1,7 +1,7 @@
 // components
 import { PageTile, Input, TextEditor, Button } from '../../../../components';
 // hooks
-import { useHandleHTextEditor } from '../../../../hooks';
+import { useHandleHTextEditor } from '../../../../utils/hooks';
 // icon
 import { CiTrash } from "react-icons/ci";
 // import { IoAdd } from "react-icons/io5";

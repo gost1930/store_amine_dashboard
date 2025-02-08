@@ -5,7 +5,7 @@ import AddCategory from './AddCategory'
 // component
 import { Button, Divider } from '../../components';
 // custom hooks
-import { useDisCloser } from '../../hooks';
+import { useDisCloser } from '../../utils/hooks';
 // icon
 import { IoAdd } from 'react-icons/io5';
 

@@ -2,7 +2,7 @@ import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { IoIosMove } from "react-icons/io";
 import { DeleteBtn, EditBtn, ModalDelete } from "../../../../components";
-import { useDisCloser } from "../../../../hooks";
+import { useDisCloser } from "../../../../utils/hooks";
 import FaqsAE from "../AddEditFaqs/FaqsAE";
 import { useState, useCallback } from "react";
 
