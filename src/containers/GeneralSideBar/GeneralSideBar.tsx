@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 // links
 import { links, settingsAndPayment } from "./links";
@@ -10,7 +10,9 @@ const GeneralSideBar = ({ isOpen, setIsOpen }: any) => {
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
-
+  const { pathname } = useLocation();
+  const openSubLinks2 = "/" + pathname.split("/").filter(item => item.trim() !== '')[0];
+  console.log(openSubLinks2)
   const toggleSubLinks = (linkName: string) => {
     setOpenSubLinks(openSubLinks === linkName ? null : linkName);
   };
@@ -43,11 +45,11 @@ const GeneralSideBar = ({ isOpen, setIsOpen }: any) => {
       openSlide();
     }
   };
+  // console.log("openSubLinks :", openSubLinks2)
   return (
     <div
-      className={`side-bar absolute top-0 ${
-        !isOpen ? "-right-[80%] md:-right-[20%]" : "right-0"
-      } min-h-full px-3 py-5 w-full md:w-[28%] lg:w-1/4  duration-300 border-l overflow-y-auto z-10 bg-white`}
+      className={`side-bar absolute top-0 ${!isOpen ? "-right-[80%] md:-right-[20%]" : "right-0"
+        } min-h-full px-3 py-5 w-full md:w-[28%] lg:w-1/4  duration-300 border-l overflow-y-auto z-10 bg-white`}
     >
       {/* btn */}
       <div
@@ -64,9 +66,8 @@ const GeneralSideBar = ({ isOpen, setIsOpen }: any) => {
 
       <div className="mt-10 ">
         <div
-          className={`${
-            !isOpen ? "hidden" : "md:grid"
-          } place-content-center hidden`}
+          className={`${!isOpen ? "hidden" : "md:grid"
+            } place-content-center hidden`}
         >
           <h1 className="text-zinc-800 text-2xl text-center">amine store</h1>
           <div className="px-3 py-1 my-5 bg-green-200 rounded-full">
@@ -77,20 +78,18 @@ const GeneralSideBar = ({ isOpen, setIsOpen }: any) => {
         <div className="mt-5 px-1">
           {links.map((link, index) => (
             <div key={index} className="mb-2 duration-300 h-fit">
-              {link.subLinks?.length ? (
+              {!link.subLinks?.length ? (
                 <Link
                   to={link.path}
-                  className={`flex flex-col ${
-                    !isOpen && "items-end -translate-x-2 lg:translate-x-1"
-                  }`}
+                  className={`flex flex-col ${!isOpen && "items-end -translate-x-2 lg:translate-x-1"
+                    }`}
                   onClick={() => logicforSlide(link)}
                 >
                   <motion.div
-                    className={` py-2 px-3 my-1 rounded-xl hover:bg-cyan-600 ${
-                      openSubLinks === link.name
-                        ? "bg-cyan-600 text-white"
-                        : "hover:text-white"
-                    }  
+                    className={` py-2 px-3 my-1 rounded-xl hover:bg-primary ${pathname === link.path
+                      ? "bg-primary text-white"
+                      : "hover:text-white"
+                      }  
                   flex justify-between items-center`}
                     onClick={() =>
                       link.subLinks?.length && toggleSubLinks(link.name)
@@ -103,26 +102,23 @@ const GeneralSideBar = ({ isOpen, setIsOpen }: any) => {
                     </h1>
                     {isOpen && link.subLinks?.length ? (
                       <IoIosArrowDown
-                        className={`${
-                          openSubLinks === link.name ? "rotate-180" : ""
-                        } duration-200`}
+                        className={`${openSubLinks === link.name ? "rotate-180" : ""
+                          } duration-200`}
                       />
                     ) : null}
                   </motion.div>
                 </Link>
               ) : (
                 <div
-                  className={`flex flex-col ${
-                    !isOpen && "items-end -translate-x-2 lg:translate-x-1"
-                  }`}
+                  className={`flex flex-col cursor-pointer ${!isOpen && "items-end -translate-x-2 lg:translate-x-1"
+                    }`}
                   onClick={() => logicforSlide(link)}
                 >
                   <motion.div
-                    className={` py-2 px-3 my-1 rounded-xl hover:bg-cyan-600 ${
-                      openSubLinks === link.name
-                        ? "bg-cyan-600 text-white"
-                        : "hover:text-white"
-                    }  
+                    className={` py-2 px-3 my-1 rounded-xl  ${openSubLinks2 === link.path
+                      ? "bg-primary text-white"
+                      : "hover:text-white hover:bg-primary"
+                      }  
                   flex justify-between items-center`}
                     onClick={() =>
                       link.subLinks?.length && toggleSubLinks(link.name)
@@ -135,9 +131,8 @@ const GeneralSideBar = ({ isOpen, setIsOpen }: any) => {
                     </h1>
                     {isOpen && link.subLinks?.length ? (
                       <IoIosArrowDown
-                        className={`${
-                          openSubLinks === link.name ? "rotate-180" : ""
-                        } duration-200`}
+                        className={`${openSubLinks === link.name ? "rotate-180" : ""
+                          } duration-200`}
                       />
                     ) : null}
                   </motion.div>
@@ -175,17 +170,15 @@ const GeneralSideBar = ({ isOpen, setIsOpen }: any) => {
             <div key={index} className="mb-2 duration-300 h-fit">
               <Link
                 to={link.path}
-                className={`flex flex-col ${
-                  !isOpen && "items-end -translate-x-2 lg:translate-x-1"
-                }`}
+                className={`flex flex-col ${!isOpen && "items-end -translate-x-2 lg:translate-x-1"
+                  }`}
                 onClick={() => logicforSlide(link)}
               >
                 <motion.div
-                  className={` py-2 px-3 my-1 rounded-xl hover:bg-cyan-600 ${
-                    openSubLinks === link.name
-                      ? "bg-cyan-600 text-white"
-                      : "hover:text-white"
-                  }  
+                  className={` py-2 px-3 my-1 rounded-xl hover:bg-primary ${openSubLinks === link.name
+                    ? "bg-primary text-white"
+                    : "hover:text-white"
+                    }  
                   flex justify-between items-center`}
                   onClick={() =>
                     link.subLinks?.length && toggleSubLinks(link.name)

@@ -1,6 +1,6 @@
 // images
 import { useState } from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/s.png";
 import GeneralSideBar from "../GeneralSideBar/GeneralSideBar";
 const GeneralPage = ({ children }: any) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,7 @@ const GeneralPage = ({ children }: any) => {
       >
         <nav className="flex items-center justify-between w-full px-10 py-2 border-b shadow-sm mb-5">
           {/* logo */}
-          <img src={logo} alt="logo" className="w-16 " />
+          <img src={logo} alt="logo" className="w-7 h-7 " />
           {/* links */}
           <div className="flex items-center gap-4">
             <select name="" id="" className="bg-transparent p-1 border focus:outline-cyan-700">
